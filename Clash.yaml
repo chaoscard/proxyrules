@@ -1,0 +1,328 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: true
+mode: Rule
+log-level: info
+ipv6: true
+hosts:
+  services.googleapis.cn: 216.58.200.67
+  www.google.cn: 216.58.200.67
+external-controller: 0.0.0.0:9090
+clash-for-android:
+  append-system-dns: false
+profile:
+  tracing: true
+dns:
+  enable: true
+  listen: 127.0.0.1:8853
+  default-nameserver:
+    - 223.5.5.5
+    - 1.0.0.1
+  ipv6: false
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - "*.*.xboxlive.com"
+    - speedtest.cros.wr.pvp.net
+  nameserver:
+    - https://223.6.6.6/dns-query
+    - https://rubyfish.cn/dns-query
+    - https://dns.pub/dns-query
+  fallback:
+    - https://dns.rubyfish.cn/dns-query
+    - https://public.dns.iij.jp/dns-query
+    - tls://8.8.4.4
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.googleapis.com
+      - +.gvt1.com
+
+proxy-providers:
+  Amy:
+    type: http
+    url: https://proxy-provider-converter-chaoscard.vercel.app/api/convert?url=https%3A%2F%2Fqeuhco.xyz%2F%3FL1N1YnNjcmlwdGlvbi9DbGFzaD9zaWQ9MzM1NDAmdG9rZW49a2M4TnJ0Uk9MYnAmbW09NDM2MjYmOWI%3D&target=clash
+    interval: 86400
+    path: ./Amy.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+  Unicorn:
+    type: http
+    url: https://proxy-provider-converter-chaoscard.vercel.app/api/convert?url=https%3A%2F%2Fsub.91unicorn.club%2Fapi%2Fv1%2Fclient%2Fsubscribe%3Ftoken%3D581e3a3e1ae227a9233e6c02ab16abb6&target=clash
+    interval: 86400
+    path: ./Unicron.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+
+proxy-groups:
+  - name: "Proxy"
+    type: select
+    proxies:
+      - HK
+      - US
+      - SG
+      - JP
+      - Other Area
+
+  - name: "HK"
+    type: select
+    filter: "(?i)HongKong|Hong Kong|HK|香港|港"
+    use:
+      - Amy
+      - Unicorn
+      
+  - name: "US"
+    type: select
+    filter: "(?i)UnitedStates|United States|US|美国|美"
+    use:
+      - Amy
+      - Unicorn
+      
+  - name: "SG"
+    type: select
+    filter: "(?i)Singapore|SG|新加坡|新"
+    use:
+      - Amy
+      - Unicorn
+      
+  - name: "JP"
+    type: select
+    filter: "(?i)Japan|JP|日本|日"
+    use:
+      - Amy
+      - Unicorn
+
+  - name: "Other Area"
+    type: select
+    filter: "(?i)^(?!.*(?:🇭🇰|🇺🇸|🇸🇬|🇯🇵|港|hk|hongkong|美|us|unitedstates|新|sg|singapore||日jp|japan)).*"
+    use:
+      - Amy
+      - Unicorn
+
+  - name: "Foreign Media"
+    type: select
+    proxies:
+      - HK
+      - US
+      - SG
+      - JP
+      - Other Area
+
+  - name: "Others"
+    type: select
+    proxies:
+      - PROXY
+      - DIRECT
+
+  - name: "HKMT Media"
+    type: select
+    proxies:
+      - DIRECT
+      - HK
+
+  - name: "AD"
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+
+      
+rule-providers:
+  reject:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  icloud:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/icloud.txt"
+    path: ./ruleset/icloud.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  streaming:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/DivineEngine/Profiles/master/Clash/RuleSet/StreamingMedia/Streaming.yaml"
+    path: ./ruleset/streaming.yaml
+    interval: 86400
+  
+  steam:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml'
+    path: ./ruleset/steam.yaml
+    interval: 86400
+
+  steamCN:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.yaml'
+    path: ./ruleset/steamCN.yaml
+    interval: 86400
+    
+  youtube:
+    type: http
+    behavior: classical
+    url: 'https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml'
+    path: ./ruleset/youtube.yaml
+    interval: 86400
+
+  proxy:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+  applications:
+    type: http
+    behavior: classical
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+rules:
+  - RULE-SET,applications,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,reject,Ads
+  - RULE-SET,icloud,Apple
+  - RULE-SET,apple,Apple
+  - RULE-SET,youtube,YouTube
+  - RULE-SET,streaming,GlobalMedia
+  - RULE-SET,steamCN,DIRECT
+  - RULE-SET,steam,Steam
+  - RULE-SET,proxy,PROXY
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,telegramcidr,Telegram
+  - RULE-SET,lancidr,DIRECT
+  - GEOIP,CN,DIRECT
+  - MATCH,Others
