@@ -7,7 +7,7 @@
 
 [Rewrite]
 # hostname = adx.sogaha.cn
-^https?:\/\/adx\.sogaha\.cn\/sdk\/ad reject-dict
+^https?:\/\/adx\.sogaha\.cn\/sdk\/ad reject
 
 [MitM]
 hostname = adx.sogaha.cn
