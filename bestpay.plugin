@@ -1,11 +1,14 @@
-#!name=翼支付
-#!desc=翼支付开屏广告去除
-#!author=chaoscard
-#!homepage=https://github.com/chaoscard/proxyrules
-#!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay_icon.png
-#!raw-url=https://github.com/chaoscard/proxyrules/raw/refs/heads/master/bestpay.plugin
+#!name = 翼支付
+#!desc = 翼支付开屏广告去除
+#!openUrl = https://apps.apple.com/app/id1494661473
+#!author= chaoscard[https://github.com/chaoscard]
 #!tag = 去广告
+#!homepage = https://github.com/chaoscard/proxyrules
+#!icon = https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay_icon.png
 
-# > 翼支付
+[Rewrite]
 # hostname = adx.sogaha.cn
-^https?:\/\/adx\.sogaha\.cn\/ssp\/ad\/get\?ip url reject-dict
+^https?:\/\/adx\.sogaha\.cn\/ssp\/ad\/get\?ip - reject-dict
+
+[MitM]
+hostname = adx.sogaha.cn
