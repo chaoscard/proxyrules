@@ -5,6 +5,10 @@
 #!homepage = https://github.com/chaoscard/proxyrules
 #!icon = https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay_icon.png
 
+[Rule]
+# adx.sogaha.cn
+DOMAIN-SUFFIX, adx.sogaha.cn, REJECT
+
 [Rewrite]
 # hostname = adx.sogaha.cn
 ^https?:\/\/adx\.sogaha\.cn\/sdk\/ad reject
