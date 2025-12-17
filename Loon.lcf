@@ -25,21 +25,21 @@ wifi-access-socks5-port = 7221
 [Remote Proxy]
 
 [Remote Filter]
-🇺🇸 美国 = NameRegex, FilterKey = "(?i)^(美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US)", img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US(2).png
-🇭🇰 香港 = NameRegex, FilterKey = "(?i)^(香港|港|hong|HK|HKG|🇭🇰)", img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong(3).png
-🇯🇵 日本 = NameRegex, FilterKey = "(?i)^(日本|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan)", img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan(2).png
-🇨🇳 台湾 = NameRegex, FilterKey = "(?i)(台|TW|Tai)", img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
-🇸🇬 新加坡 = NameRegex, FilterKey = "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)", img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
-🌐 其他 = NameRegex, FilterKey = "^(?!.*(香港|美国|日本|台湾|新加坡|网|流量)).*$", img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
+美国 = NameRegex, FilterKey = "(?i)^(美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US)"
+香港 = NameRegex, FilterKey = "(?i)^(香港|港|hong|HK|HKG|🇭🇰)"
+日本 = NameRegex, FilterKey = "(?i)^(日本|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan)"
+台湾 = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
+新加坡 = NameRegex, FilterKey = "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
+其他 = NameRegex, FilterKey = "^(?!.*(香港|美国|日本|台湾|新加坡|网|流量)).*$"
 
 [Proxy Group]
 Proxies = select,美国,香港,日本,台湾,新加坡,其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
-美国 = select,🇺🇸 美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US(2).png
-香港 = select,🇭🇰 香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong(3).png
-日本 = select,🇯🇵 日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan(2).png
-台湾 = select,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
-新加坡 = select,🇸🇬 新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
-其他 = select,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
+🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US(2).png
+🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong(3).png
+🇯🇵 日本 = select,日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan(2).png
+🇨🇳 台湾 = select,台湾,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
+🇸🇬 新加坡 = select,新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
+🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 Netflix = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
 HBO = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
 DisneyPlus = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
