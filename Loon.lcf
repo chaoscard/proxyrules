@@ -33,33 +33,33 @@ wifi-access-socks5-port = 7221
 其他 = NameRegex, FilterKey = "^(?!.*(香港|美国|日本|台湾|新加坡|网|流量)).*$"
 
 [Proxy Group]
-Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+🔰 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
 🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US(2).png
 🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong(3).png
 🇯🇵 日本 = select,日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan(2).png
 🇨🇳 台湾 = select,台湾,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/taiwan.png
 🇸🇬 新加坡 = select,新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
 🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
-Netflix = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
-HBO = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
-DisneyPlus = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
-YouTube = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/YouTube.png
+Netflix = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
+HBO = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
+DisneyPlus = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
+YouTube = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/YouTube.png
 Bahamut = select,🇨🇳 台湾,🇭🇰 香港,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Bahamut.png
 Bilibili = select,🎯Direct,🇭🇰 香港,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Bilibili.png
-AI = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
-Telegram = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
-Crypto = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
-Steam = select,Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/steam.png
-Epic = select,Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/EpicGames.png
-Xbox = select,Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Xbox.png
-PlayStation = select,Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/playstation.png
-Microsoft = select,🎯Direct,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Microsoft.png
-Scholar = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Scholar.png
-Apple = select,🎯Direct,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Apple.png
-Google = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/google.png
-Tiktok = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
-🎯Direct = select,DIRECT,Proxies,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
-✈️Final = select,Proxies,🎯Direct,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+AI = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
+Telegram = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+Crypto = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
+Steam = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/steam.png
+Epic = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/EpicGames.png
+Xbox = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Xbox.png
+PlayStation = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/playstation.png
+Microsoft = select,🎯Direct,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Microsoft.png
+Scholar = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Scholar.png
+Apple = select,🎯Direct,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Apple.png
+Google = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/google.png
+Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+🎯Direct = select,DIRECT,🔰 Proxies,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
+✈️Final = select,🔰 Proxies,🎯Direct,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
 
 [Rule]
 GEOIP,CN,🎯Direct
@@ -90,10 +90,10 @@ https://rawstatic.com/HotKids/Rules/master/Surge/RULE-SET/Bilibili.list, policy=
 https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=Microsoft, enabled=true
 https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=Apple, enabled=true
 https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list, policy=Tiktok, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=Proxies, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list, policy=Proxies, enabled=true
-https://rawstatic.com/nexitallyy/ProxyRules/refs/heads/main/Extra_Proxies.list, policy=Proxies, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list, policy=Proxies, enabled=true
+https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=🔰 Proxies, enabled=true
+https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list, policy=🔰 Proxies, enabled=true
+https://rawstatic.com/nexitallyy/ProxyRules/refs/heads/main/Extra_Proxies.list, policy=🔰 Proxies, enabled=true
+https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list, policy=🔰 Proxies, enabled=true
 https://www.naiixi.com/Extra_CN.list, policy=🎯Direct, enabled=true
 https://www.naiixi.com/Extra_CN_2.list, policy=🎯Direct, enabled=true
 https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=🎯Direct, enabled=true
@@ -117,8 +117,8 @@ https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bilibili.lpx, polic
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/pixiv(1).png, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
