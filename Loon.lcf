@@ -39,7 +39,7 @@ Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾
 日本 = select,🇯🇵 日本,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/JP.png
 台湾 = select,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TW.png
 新加坡 = select,🇸🇬 新加坡,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/SG.png
-🌐 其他 = select,🌐 其他,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png
+其他 = select,🌐 其他,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png
 Netflix = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
 HBO = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
 DisneyPlus = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
