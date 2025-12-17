@@ -34,6 +34,12 @@ wifi-access-socks5-port = 7221
 
 [Proxy Group]
 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+🇺🇸 美国 = select,🇺🇸 美国
+🇭🇰 香港 = select,🇭🇰 香港
+🇯🇵 日本 = select,🇯🇵 日本
+🇨🇳 台湾 = select,🇨🇳 台湾
+🇸🇬 新加坡 = select,🇸🇬 新加坡
+🌐 其他 = select,🌐 其他
 Netflix = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
 HBO = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
 DisneyPlus = select,Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
