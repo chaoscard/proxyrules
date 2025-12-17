@@ -30,7 +30,7 @@ wifi-access-socks5-port = 7221
 🇯🇵 日本 = NameRegex, FilterKey = "(?i)^(日本|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan)"
 🇨🇳 台湾 = NameRegex, FilterKey = "(?i)(台|台湾|TW|Taiwan)"
 🇸🇬 新加坡 = NameRegex, FilterKey = "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
-🌐 其他 = NameRegex, FilterKey = "(?i)^(?!(港|美|日|台|新))"
+🌐 其他 = NameRegex, FilterKey = "(?=.*(?i)^(?!.*(香港|美国|日本|台湾|新加坡)).*$"
 
 [Proxy Group]
 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
