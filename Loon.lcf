@@ -33,7 +33,7 @@ wifi-access-socks5-port = 7221
 其他 = NameRegex, FilterKey = "^(?!.*(香港|美国|日本|台湾|新加坡|网|流量)).*$"
 
 [Proxy Group]
-Proxies = select,美国,香港,日本,台湾,新加坡,其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
 🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/US(2).png
 🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Hongkong(3).png
 🇯🇵 日本 = select,日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/Japan(2).png
