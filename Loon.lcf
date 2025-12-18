@@ -105,15 +105,14 @@ https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeCh
 [Script]
 
 [Plugin]
-http://script.hub/file/_start_/https://raw.githubusercontent.com/Moli-X/Resources/main/Rewrite/Collections.conf/_end_/Collections.plugin?n=%E8%8E%AB%E7%A6%BB%E5%8E%BB%E5%B9%BF%E5%91%8A&type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, img-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/ad(6).png, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.lpx, enabled=true
 https://whatshub.top/plugin/adultraplus.plugin, enabled=false
-https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/SkipProxy.lpx, tag=跳过代理检测, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.lpx, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUpAds.lpx, enabled=true
 https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BlockAds.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bilibili.lpx, policy=REJECT, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/SkipProxy.lpx, tag=跳过代理检测, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bilibili.lpx, enabled=true
+https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.lpx, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/pixiv(1).png, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
