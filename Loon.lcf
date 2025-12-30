@@ -105,20 +105,18 @@ https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeCh
 [Script]
 
 [Plugin]
+https://raw.githubusercontent.com/Moli-X/Resources/refs/heads/main/Loon/SkipProxy.plugin, tag=跳过代理检测, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/ad(3).png, enabled=true
 https://whatshub.top/plugin/adultraplus.plugin, enabled=false
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUpAds.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BlockAds.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/refs/heads/main/Plugin/SkipProxy.lpx, tag=跳过代理检测, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bilibili.lpx, enabled=true
-https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/pixiv(1).png, enabled=true
-https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
