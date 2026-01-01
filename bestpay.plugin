@@ -7,7 +7,6 @@
 
 [Rule]
 # adx.sogaha.cn
-
 DOMAIN-SUFFIX, sogaha.cn, REJECT
 
 [Rewrite]
