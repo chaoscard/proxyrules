@@ -1,28 +1,31 @@
 [General]
 ip-mode = v4-only
 ipv6-vif = off
-allow-wifi-access = false
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,255.255.255.255/32
-disable-stun = true
-disconnect-on-policy-change = true
-dns-reject-mode = LoopbackIP
+
 dns-server = 119.29.29.29,223.5.5.5
 doh-server = https://223.5.5.5/resolve,https://sm2.doh.pub/dns-query
-geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
-ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-interface-mode = auto
-ipv6=false
-proxy-test-url = http://www.gstatic.com/generate_204
-internet-test-url = http://wifi.vivo.com.cn/generate_204
-resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,e.crashlynatics.com
+
 sni-sniffing = true
-switch-node-after-failure-times=3
-test-timeout = 2
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+
+allow-wifi-access = false
 wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
+interface-mode = auto
 
-skip-first-packet = *.ccb.com
+test-timeout = 2
+disconnect-on-policy-change = true
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+proxy-test-url = http://www.gstatic.com/generate_204
+resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
+geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,255.255.255.255/32
 
 [Proxy]
 
