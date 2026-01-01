@@ -3,7 +3,9 @@ ip-mode = v4-only
 ipv6-vif = off
 
 dns-server = 119.29.29.29,223.5.5.5
-doh-server = https://223.5.5.5/resolve,https://sm2.doh.pub/dns-query
+doq-server = quic://dns.alidns.com:853,quic://223.5.5.5:853
+doh-server = https://sm2.doh.pub/dns-query,https://223.5.5.5/resolve
+doh3-server = h3://dns.alidns.com/dns-query,h3://223.5.5.5/dns-query
 
 sni-sniffing = true
 disable-stun = true
