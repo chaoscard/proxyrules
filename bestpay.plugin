@@ -7,11 +7,11 @@
 
 [Rule]
 # adx.sogaha.cn
-DOMAIN-SUFFIX, sogaha.cn, REJECT
+DOMAIN-SUFFIX, *.sogaha.cn, REJECT
 
 [Rewrite]
 # hostname = adx.sogaha.cn
-^https?:\/\/sogaha\.cn\/sdk\/ad\/ reject-dict
+^https?:\/\/.sogaha\.cn\/sdk\/ad reject-dict
 
 [MitM]
-hostname = sogaha.cn
+hostname = *.sogaha.cn
