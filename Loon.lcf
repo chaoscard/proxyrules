@@ -54,7 +54,6 @@ Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,�
 ✈️Final = select,🔰 Proxies,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
 
 [Rule]
-GEOIP,CN,🎯Direct
 FINAL,✈️Final
 
 [Remote Rule]
@@ -64,6 +63,9 @@ https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=tru
 https://rule.kelee.one/Loon/GlobalMedia.lsr, policy=GlobalMedia, tag=GlobalMedia, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
+
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=🎯Direct, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯Direct, tag=CN REGION, enabled=true
 
 [Rewrite]
 
