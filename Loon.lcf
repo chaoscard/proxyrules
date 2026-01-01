@@ -81,13 +81,14 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯Direct, tag=CN R
 [Plugin]
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, tag=DNS增强, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag=通用增强, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
-https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
+
 https://whatshub.top/plugin/adultraplus.plugin, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
