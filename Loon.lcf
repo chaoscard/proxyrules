@@ -1,12 +1,15 @@
 [General]
 ip-mode = v4-only
+ipv6-vif = off
 allow-wifi-access = false
 bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,255.255.255.255/32
 disable-stun = true
 disconnect-on-policy-change = true
+dns-reject-mode = LoopbackIP
 dns-server = 119.29.29.29,223.5.5.5
 doh-server = https://223.5.5.5/resolve,https://sm2.doh.pub/dns-query
 geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
 interface-mode = auto
 ipv6=false
 proxy-test-url = http://www.gstatic.com/generate_204
@@ -14,7 +17,6 @@ internet-test-url = http://wifi.vivo.com.cn/generate_204
 resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
 skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,e.crashlynatics.com
 sni-sniffing = true
-ssid-trigger = "default":rule, "cellular":rule,"Ccccccc":DIRECT
 switch-node-after-failure-times=3
 test-timeout = 2
 wifi-access-http-port = 7222
@@ -25,12 +27,12 @@ wifi-access-socks5-port = 7221
 [Remote Proxy]
 
 [Remote Filter]
-美国 = NameRegex, FilterKey = "(?i)^(美|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|🇺🇸|US)"
-香港 = NameRegex, FilterKey = "(?i)^(香港|港|hong|HK|HKG|🇭🇰)"
-日本 = NameRegex, FilterKey = "(?i)^(日本|东京|大阪|泉日|埼玉|沪日|深日|🇯🇵|JP|Japan)"
-台湾 = NameRegex, FilterKey = "(?i)(台|TW|Tai)"
+美国 = NameRegex, FilterKey = "(?i)^(美|美国|🇺🇸|US)"
+香港 = NameRegex, FilterKey = "(?i)^(港|香港|hong|HK|HKG|🇭🇰)"
+日本 = NameRegex, FilterKey = "(?i)^(日|日本|🇯🇵|JP|Japan)"
+台湾 = NameRegex, FilterKey = "(?i)(台|台湾|TW|Tai)"
 新加坡 = NameRegex, FilterKey = "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
-其他 = NameRegex, FilterKey = "^(?!.*(香港|美国|日本|台湾|新加坡|网|流量)).*$"
+其他 = NameRegex, FilterKey = "^(?!.*(港|美|日|台|新加坡|网|流量)).*$"
 
 [Proxy Group]
 🔰 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
@@ -40,63 +42,28 @@ wifi-access-socks5-port = 7221
 🇨🇳 台湾 = select,台湾,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/CN.png
 🇸🇬 新加坡 = select,新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/singapore.png
 🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
-Netflix = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Netflix.png
-HBO = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/HBO%20Max.png
-DisneyPlus = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Disney%2B.png
-YouTube = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/YouTube.png
-Bahamut = select,🇨🇳 台湾,🇭🇰 香港,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Bahamut.png
-Bilibili = select,🎯Direct,🇭🇰 香港,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Bilibili.png
+
 AI = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
-Telegram = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+AsianMedia = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/DomesticMedia.png
 Crypto = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
-Steam = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/steam.png
-Epic = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/EpicGames.png
-Xbox = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Xbox.png
-PlayStation = select,🔰 Proxies,🎯Direct,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/playstation.png
-Microsoft = select,🎯Direct,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Microsoft.png
-Scholar = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Scholar.png
-Apple = select,🎯Direct,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Apple.png
-Google = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/color/google.png
+GlobalMedia = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/ForeignMedia.png
+Telegram = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
 Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+
 🎯Direct = select,DIRECT,🔰 Proxies,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
-✈️Final = select,🔰 Proxies,🎯Direct,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+✈️Final = select,🔰 Proxies,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
 
 [Rule]
 GEOIP,CN,🎯Direct
 FINAL,✈️Final
 
 [Remote Rule]
-https://rawstatic.com/nexitallyy/ProxyRules/main/Extra_CN_3.list, policy=🎯Direct, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalScholar/GlobalScholar.list, policy=Scholar, enabled=true
-https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, enabled=true
-https://rawstatic.com/nexitallyy/ProxyRules/main/Extra_AI.list, policy=AI, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.list, policy=Google, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list, policy=YouTube, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Game/GameDownload/GameDownload.list, policy=🎯Direct, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, policy=🎯Direct, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list, policy=🎯Direct, enabled=true
-https://rawstatic.com/HotKids/Rules/master/Surge/RULE-SET/Netflix.list, policy=Netflix, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, policy=Telegram, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list, policy=Steam, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.list, policy=Epic, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.list, policy=Xbox, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list, policy=PlayStation, enabled=true
-https://rawstatic.com/HotKids/Rules/master/Surge/RULE-SET/HBO_Max.list, policy=HBO, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOUSA/HBOUSA.list, policy=HBO, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBOHK/HBOHK.list, policy=HBO, enabled=true
-https://www.naiixi.com/DisneyPlus.list, policy=DisneyPlus, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list, policy=Bahamut, enabled=true
-https://rawstatic.com/HotKids/Rules/master/Surge/RULE-SET/Bilibili.list, policy=Bilibili, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, policy=Microsoft, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list, policy=Apple, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.list, policy=Tiktok, enabled=true
-https://rawstatic.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, policy=🔰 Proxies, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.list, policy=🔰 Proxies, enabled=true
-https://rawstatic.com/nexitallyy/ProxyRules/refs/heads/main/Extra_Proxies.list, policy=🔰 Proxies, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.list, policy=🔰 Proxies, enabled=true
-https://www.naiixi.com/Extra_CN.list, policy=🎯Direct, enabled=true
-https://www.naiixi.com/Extra_CN_2.list, policy=🎯Direct, enabled=true
-https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=🎯Direct, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
+https://rule.kelee.one/Loon/AsianMedia.lsr, policy=AsianMedia, tag=AsianMedia, enabled=true
+https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
+https://rule.kelee.one/Loon/GlobalMedia.lsr, policy=GlobalMedia, tag=GlobalMedia, enabled=true
+https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
 
 [Rewrite]
 
@@ -105,18 +72,19 @@ https://rawstatic.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeCh
 [Script]
 
 [Plugin]
-https://raw.githubusercontent.com/Moli-X/Resources/refs/heads/main/Loon/SkipProxy.plugin, tag=跳过代理检测, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/ad(3).png, enabled=true
-https://whatshub.top/plugin/adultraplus.plugin, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+https://raw.githubusercontent.com/Moli-X/Resources/refs/heads/main/Loon/SkipProxy.plugin, tag=跳过代理检测, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/ad(3).png, enabled=true
+https://whatshub.top/plugin/adultraplus.plugin, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/pixiv(1).png, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
@@ -128,7 +96,6 @@ https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
