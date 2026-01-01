@@ -49,7 +49,7 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 
 AI = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
-AsianMedia = select,🎯Direct,,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
+AsianMedia = select,🎯Direct,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
 Crypto = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
 GlobalMedia = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
 Telegram = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇨🇳 台湾,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
@@ -85,7 +85,7 @@ https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
 https://raw.githubusercontent.com/Moli-X/Resources/refs/heads/main/Loon/SkipProxy.plugin, tag=跳过代理检测, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/ad(3).png, enabled=true
 https://whatshub.top/plugin/adultraplus.plugin, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
@@ -118,5 +118,3 @@ https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
 
 [MITM]
 skip-server-cert-verify = false
-ca-p12 = 
-ca-passphrase = 
