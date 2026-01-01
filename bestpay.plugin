@@ -8,7 +8,7 @@
 [Rule]
 # adx.sogaha.cn
 
-DOMAIN-SUFFIX, adx.sogaha.cn, REJECT
+DOMAIN-SUFFIX, sogaha.cn, REJECT
 
 [Rewrite]
 # hostname = adx.sogaha.cn
