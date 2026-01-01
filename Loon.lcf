@@ -89,7 +89,7 @@ https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.p
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
-https://whatshub.top/plugin/adultraplus.plugin, enabled=false
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
