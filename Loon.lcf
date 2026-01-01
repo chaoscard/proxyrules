@@ -84,6 +84,7 @@ https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin
