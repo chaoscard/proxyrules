@@ -86,7 +86,7 @@ https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, en
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, enabled=true
-https://raw.githubusercontent.com/Moli-X/Resources/refs/heads/main/Loon/SkipProxy.plugin, tag=跳过代理检测, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/ad(3).png, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin
 https://whatshub.top/plugin/adultraplus.plugin, enabled=false
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
