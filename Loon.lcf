@@ -22,6 +22,8 @@ test-timeout = 2
 wifi-access-http-port = 7222
 wifi-access-socks5-port = 7221
 
+skip-first-packet = *.ccb.com
+
 [Proxy]
 
 [Remote Proxy]
