@@ -12,7 +12,7 @@ DOMAIN-SUFFIX, adx.sogaha.cn, REJECT
 
 [Rewrite]
 # hostname = adx.sogaha.cn
-^https?:\/\/adx\.sogaha\.cn\/sdk\/ad\/get\?ip reject-dict
+^https?:\/\.sogaha\.cn\/sdk\/ad\/ reject-dict
 
 [MitM]
-hostname = adx.sogaha.cn
+hostname = sogaha.cn
