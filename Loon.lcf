@@ -119,6 +119,4 @@ https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
 
 [MITM]
-ca-p12 = 
-ca-passphrase = 
 skip-server-cert-verify = false
