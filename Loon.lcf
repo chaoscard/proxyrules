@@ -65,7 +65,7 @@ Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,�
 FINAL,✈️Final
 
 [Remote Rule]
-https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫Ads, tag=Ads, enabled=true
+https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫Ads, tag=Ads, enabled=false
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
 https://rule.kelee.one/Loon/AsianMedia.lsr, policy=AsianMedia, tag=AsianMedia, enabled=true
 https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
