@@ -95,7 +95,6 @@ https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.
 https://gist.githubusercontent.com/YIJIU007/a6f754ad773b99f8528d8a002022725a/raw/5fedb0b5762aa6f0fa68fc08bf30aab3dfc27a8a/StartUpADS.plugin, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
-https://raw.githubusercontent.com/chaoscard/proxyrules/refs/heads/master/bestpay.plugin, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
