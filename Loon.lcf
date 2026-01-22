@@ -64,6 +64,7 @@ FINAL,✈️ Final
 
 [Remote Rule]
 https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫 Ads, tag=Ads, enabled=false
+https://rule.kelee.one/Loon/Hijacking.lsr, policy=🚫 Ads, tag=Hijacking, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
 https://rule.kelee.one/Loon/AsianMedia.lsr, policy=AsianMedia, tag=AsianMedia, enabled=true
 https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
@@ -93,7 +94,7 @@ https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, enabled=true
 https://gist.githubusercontent.com/YIJIU007/a6f754ad773b99f8528d8a002022725a/raw/5fedb0b5762aa6f0fa68fc08bf30aab3dfc27a8a/StartUpADS.plugin, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, policy=🚫 Ads, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
