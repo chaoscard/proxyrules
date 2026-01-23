@@ -4,12 +4,12 @@ Providers: &Providers {type: http, interval: 86400, proxy: 🎯 Direct, health-c
 # 锚点 - 节点订阅
 proxy-providers: 
   Amy:
-    url: 'URL'
+    url: 'AmyURL'
     <<: *Providers
     path: './proxy_provider/Amy.yaml'
     
   Unicorn:
-    url: 'URL'
+    url: 'UnicornURL'
     <<: *Providers
     path: './proxy_provider/Unicorn.yaml'
 
@@ -105,17 +105,17 @@ tun:
 
 # 锚点 - 节点筛选组
 FilterUS: &FilterUS "(?i)^(美|美国|🇺🇸|US)"
-FilterHK: &FilterHK "(?i)^(港|香港|hong|HK|HKG|🇭🇰)"
+FilterHK: &FilterHK "(?i)^(港|香港|🇭🇰|HK)"
 FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
-FilterSG: &FilterSG "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
-FilterOther: &FilterOther "^(?!.*(港|美|日|新加坡|网|流量)).*$"
+FilterSG: &FilterSG "(?i)^(新|新加坡|🇸🇬|SG|Singapore)"
+FilterOther: &FilterOther "^(?!.*(美|港|日|新|网|流量)).*$"
 
 # 策略组
 proxy-groups: 
   - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
   
   - {name: AI, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png'}
-  - {name: AsianMedia, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
+  - {name: AsianMedia, type: select, proxies: [🎯 Direct, 🇭🇰 香港, 🇭🇰 日本], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
   - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
   - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
   - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
@@ -136,86 +136,46 @@ RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yam
 
 # 订阅规则
 rule-providers:
+  Ads:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml'
+    path: './RuleSet/Ads.yaml'
+
+  Hijacking:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml'
+    path: './RuleSet/Hijacking.yaml'
+
+  AI:
+    <<: *RuleSet
+    url: 'https://kelee.one/Tool/Loon/Lsr/AI.yaml'
+    path: './RuleSet/AI.yaml'
+
+  AsianMedia:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AsianMedia/AsianMedia.yaml'
+    path: './RuleSet/AsianMedia.yaml'
+
+  Crypto:
+    <<: *RuleSet
+    url: 'https://www.naiixi.com/Extra_Crypto.list'
+    path: './RuleSet/Crypto.yaml'
+
   GlobalMedia:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml'
     path: './RuleSet/GlobalMedia.yaml'
-
-  ChinaMedia:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml'
-    path: './RuleSet/ChinaMedia.yaml'
-
-  Netflix:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml'
-    path: './RuleSet/Netflix.yaml'
-
-  Disney+:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney_No_Resolve.yaml'
-    path: './RuleSet/Disney+.yaml'
-
-  YouTube:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml'
-    path: './RuleSet/YouTube.yaml'
-
-  Apple:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml'
-    path: './RuleSet/Apple.yaml'
-
-  Microsoft:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml'
-    path: './RuleSet/Microsoft.yaml'
-    
-  Nintendo:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml'
-    path: './RuleSet/Nintendo.yaml'
-    
-  PlayStation:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PlayStation/PlayStation.yaml'
-    path: './RuleSet/PlayStation.yaml'
-    
-  Epic:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml'
-    path: './RuleSet/Epic.yaml'
-    
-  Xbox:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.yaml'
-    path: './RuleSet/Xbox.yaml'
 
   TikTok:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml'
     path: './RuleSet/TikTok.yaml'
 
-  Spotify:
+  Telegram:
     <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml'
-    path: './RuleSet/Spotify.yaml'
-
-  OpenAI:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml'
-    path: './RuleSet/OpenAI.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml'
+    path: './RuleSet/Telegram.yaml'
     
-  Proxy:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml'
-    path: './RuleSet/Proxy.yaml'
-
-  China:
-    <<: *RuleSet
-    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml'
-    path: './RuleSet/China.yaml'
-
   LAN:
     <<: *RuleSet
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml'
@@ -223,22 +183,15 @@ rule-providers:
 
 # 分流规则指向
 rules:
- - RULE-SET,Apple,Apple
- - RULE-SET,Spotify,Spotify
- - RULE-SET,TikTok,TikTok
- - RULE-SET,Netflix,Netflix
- - RULE-SET,Disney+,Disney+
- - RULE-SET,YouTube,YouTube
- - RULE-SET,ChinaMedia,DIRECT
+ - RULE-SET,Ads,🚫 Ads
+ - RULE-SET, Hijacking,🚫 Ads
+ - RULE-SET,AI,AI
+ - RULE-SET,AsianMedia,AsianMedia
+ - RULE-SET,Crypto,Crypto
  - RULE-SET,GlobalMedia,GlobalMedia
- - RULE-SET,Nintendo,Gamer
- - RULE-SET,PlayStation,Gamer
- - RULE-SET,Epic,Gamer
- - RULE-SET,Xbox,Gamer
- - RULE-SET,OpenAI,OpenAI
- - RULE-SET,Microsoft,Microsoft
- - RULE-SET,Proxy,Proxy
- - RULE-SET,LAN,DIRECT
- - RULE-SET,China,DIRECT
- - GEOIP,CN,DIRECT
- - MATCH,Proxy
+ - RULE-SET,ChinaMedia,DIRECT
+ - RULE-SET,TikTok,TikTok
+ - RULE-SET,Telegram,Telegram
+ - RULE-SET,LAN,🎯 Direct
+ - GEOIP,CN,🎯 Direct
+ - MATCH,✈️ Final
