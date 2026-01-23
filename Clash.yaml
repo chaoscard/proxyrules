@@ -1,4 +1,4 @@
-# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，每 300 秒一次健康检查]
+# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，使用直连更新，每 300 秒一次健康检查]
 Providers: &Providers {type: http, interval: 86400, proxy: 🎯 Direct, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
 
 # 锚点 - 节点订阅
@@ -181,15 +181,20 @@ rule-providers:
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml'
     path: './RuleSet/LAN.yaml'
 
-# 分流规则指向
+
 rules:
+# Steam下载直连
+  - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
+  - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
+  - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
+  - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
+# 分流规则指向，按照优先级顺序排列
  - RULE-SET,Ads,🚫 Ads
  - RULE-SET, Hijacking,🚫 Ads
  - RULE-SET,AI,AI
  - RULE-SET,AsianMedia,AsianMedia
  - RULE-SET,Crypto,Crypto
  - RULE-SET,GlobalMedia,GlobalMedia
- - RULE-SET,ChinaMedia,DIRECT
  - RULE-SET,TikTok,TikTok
  - RULE-SET,Telegram,Telegram
  - RULE-SET,LAN,🎯 Direct
