@@ -122,7 +122,7 @@ proxy-groups:
   - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
   - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
   - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
-  - {name: Tiktok, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png'}  
+  - {name: TikTok, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Tiktok_1.png'}  
 
   - {name: 🎯 Direct, type: select, proxies: [DIRECT, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png'}  
   - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
@@ -186,10 +186,28 @@ rule-providers:
 
 
 rules:
+# Steam直连下载
+
   - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
   - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
   - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
   - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
+
+# BT种子直连下载
+
+  - PROCESS-NAME,qbittorrent,🎯 Direct
+  - PROCESS-NAME,qBittorrent,🎯 Direct
+  - PROCESS-NAME,thunder,🎯 Direct
+  - PROCESS-NAME,Thunder,🎯 Direct
+  - PROCESS-NAME,utorrent,🎯 Direct
+  - PROCESS-NAME,uTorrent,🎯 Direct
+  - PROCESS-NAME,transmission,🎯 Direct
+  - PROCESS-NAME,Transmission,🎯 Direct
+  - PROCESS-NAME,transmission-daemon,🎯 Direct
+  - PROCESS-NAME,transmission-qt,🎯 Direct
+
+# 分流规则
+
   - RULE-SET,Ads,🚫 Ads
   - RULE-SET,Hijacking,🚫 Ads
   - RULE-SET,AI,AI
