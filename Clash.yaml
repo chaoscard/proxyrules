@@ -183,18 +183,19 @@ rule-providers:
 
 
 rules:
- - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
- - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
- - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
- - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
- - RULE-SET,Ads,🚫 Ads
- - RULE-SET,Hijacking,🚫 Ads
- - RULE-SET,AI,AI
- - RULE-SET,AsianMedia,AsianMedia
- - RULE-SET,Crypto,Crypto
- - RULE-SET,GlobalMedia,GlobalMedia
- - RULE-SET,TikTok,TikTok
- - RULE-SET,Telegram,Telegram
- - RULE-SET,LAN,🎯 Direct
- - GEOIP,CN,🎯 Direct
- - MATCH,✈️ Final
+  - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
+  - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
+  - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
+  - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
+  - RULE-SET,Ads,🚫 Ads
+  - RULE-SET,Hijacking,🚫 Ads
+  - RULE-SET,AI,AI
+  - RULE-SET,AsianMedia,AsianMedia
+  - RULE-SET,Crypto,Crypto
+  - RULE-SET,GlobalMedia,GlobalMedia
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,LAN,🎯 Direct
+  - GEOIP,CN,🎯 Direct
+  - MATCH,✈️ Final
+  
