@@ -125,7 +125,7 @@ proxy-groups:
   - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
   - {name: ✈️ Final, type: select, proxies: [🔰 Proxy, DIRECT], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png'}  
 
-  - {name: 🇺🇸 美国,  filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
+  - {name: 🇺🇸 美国, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
   - {name: 🇭🇰 香港, filter: *FilterHK, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png'} 
   - {name: 🇯🇵 日本, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png'} 
   - {name: 🇸🇬 新加坡, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
