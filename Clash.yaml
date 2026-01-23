@@ -1,4 +1,4 @@
-# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，使用直连更新，每 300 秒一次健康检查]
+# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，更新订阅节点时使用🎯 Direct策略，每 300 秒一次健康检查]
 Providers: &Providers {type: http, interval: 86400, proxy: 🎯 Direct, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
 
 # 锚点 - 节点订阅
@@ -131,7 +131,7 @@ proxy-groups:
   - {name: 🇸🇬 新加坡, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
   - {name: 🌐 其他, filter: *FilterOther, icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png'} 
 
-# 锚点 - 规则参数 [每24小时更新一次订阅规则，更新规则时使用Proxy策略]
+# 锚点 - 规则参数 [每24小时更新一次订阅规则，更新规则时使用🔰 Proxy策略]
 RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🔰 Proxy}
 
 # 订阅规则
@@ -190,7 +190,7 @@ rules:
   - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
 # 分流规则指向，按照优先级顺序排列
  - RULE-SET,Ads,🚫 Ads
- - RULE-SET, Hijacking,🚫 Ads
+ - RULE-SET,Hijacking,🚫 Ads
  - RULE-SET,AI,AI
  - RULE-SET,AsianMedia,AsianMedia
  - RULE-SET,Crypto,Crypto
