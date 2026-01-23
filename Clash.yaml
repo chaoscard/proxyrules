@@ -1,0 +1,243 @@
+# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，每 300 秒一次健康检查]
+Providers: &Providers {type: http, interval: 86400, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
+
+# 锚点 - 节点订阅
+proxy-providers: 
+  Amy:
+    url: 'URL'
+    <<: *Providers
+    path: './proxy_provider/Amy.yaml'
+    
+  Unicorn:
+    url: 'URL'
+    <<: *Providers
+    path: './proxy_provider/Unicorn.yaml'
+
+# 通用配置
+allow-lan: true
+bind-address: "*"
+mode: rule
+log-level: info
+ipv6: true
+udp: true
+find-process-mode: strict
+profile:
+  store-selected: true
+  store-fake-ip: true
+unified-delay: true
+tcp-concurrent: true
+global-ua: clash.meta
+
+# GEO配置
+geodata-mode: false
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+
+# 端口
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+redir-port: 7893
+tproxy-port: 7894
+
+# DNS
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - rule-set:Lan
+    - rule-set:ChinaIP
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+    - quic://dns.alidns.com
+  proxy-server-nameserver:
+    - https://sm2.doh.pub/dns-query
+    - quic://dns.alidns.com
+  direct-nameserver:
+    - https://sm2.doh.pub/dns-query
+    - quic://dns.alidns.com
+
+# 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  force-domain:
+    - +.v2ex.com
+  skip-domain:
+     - "Mijia Cloud"
+     - "+.push.apple.com"
+  skip-src-address:
+    - 192.168.0.3/32
+  skip-dst-address:
+    - 192.168.0.3/32
+
+# 虚拟网卡
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+
+# 锚点 - 节点筛选组
+FilterUS: &FilterUS "(?i)^(美|美国|🇺🇸|US)"
+FilterHK: &FilterHK "(?i)^(港|香港|hong|HK|HKG|🇭🇰)"
+FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
+FilterSG: &FilterSG "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
+FilterOther: &FilterOther "^(?!.*(港|美|日|新加坡|网|流量)).*$"
+
+# 锚点 - 规则参数 [每天更新一次订阅规则，更新规则时使用Proxy策略]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: Proxy}
+
+# 策略组
+proxy-groups: 
+  - {name: 🔰 Proxies, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/pompurin404/mihomo-party/master/resources/icon.png'}
+  - {name: Telegram, type: select, proxies: 🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png'}
+  - {name: Netflix, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png'}
+  - {name: Disney+, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png'}
+  - {name: YouTube, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png'}
+  - {name: TikTok, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png'}
+  - {name: Spotify, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png'}
+  - {name: Microsoft, type: select, proxies: [DIRECT, Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png'}
+  - {name: GlobalMedia, type: select, proxies: [Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png'}
+
+  - {name: 🇺🇸 美国,  filter: *FilterUS} 
+  - {name: 🇭🇰 香港, filter: *FilterHK}
+  - {name: 🇯🇵 日本, filter: *FilterJP}
+  - {name: 🇸🇬 新加坡, filter: *FilterSG}
+  - {name: 🌐 其他, filter: *FilterOther} 
+
+# 订阅规则
+rule-providers:
+  GlobalMedia:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml'
+    path: './RuleSet/GlobalMedia.yaml'
+
+  ChinaMedia:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml'
+    path: './RuleSet/ChinaMedia.yaml'
+
+  Netflix:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix_Classical_No_Resolve.yaml'
+    path: './RuleSet/Netflix.yaml'
+
+  Disney+:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney_No_Resolve.yaml'
+    path: './RuleSet/Disney+.yaml'
+
+  YouTube:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube_No_Resolve.yaml'
+    path: './RuleSet/YouTube.yaml'
+
+  Apple:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple_Classical_No_Resolve.yaml'
+    path: './RuleSet/Apple.yaml'
+
+  Microsoft:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft_No_Resolve.yaml'
+    path: './RuleSet/Microsoft.yaml'
+    
+  Nintendo:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml'
+    path: './RuleSet/Nintendo.yaml'
+    
+  PlayStation:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PlayStation/PlayStation.yaml'
+    path: './RuleSet/PlayStation.yaml'
+    
+  Epic:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml'
+    path: './RuleSet/Epic.yaml'
+    
+  Xbox:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.yaml'
+    path: './RuleSet/Xbox.yaml'
+
+  TikTok:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml'
+    path: './RuleSet/TikTok.yaml'
+
+  Spotify:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml'
+    path: './RuleSet/Spotify.yaml'
+
+  OpenAI:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI_No_Resolve.yaml'
+    path: './RuleSet/OpenAI.yaml'
+    
+  Proxy:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Classical_No_Resolve.yaml'
+    path: './RuleSet/Proxy.yaml'
+
+  China:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/ChinaMax/ChinaMax_Classical.yaml'
+    path: './RuleSet/China.yaml'
+
+  LAN:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml'
+    path: './RuleSet/LAN.yaml'
+
+# 分流规则指向
+rules:
+ - RULE-SET,Apple,Apple
+ - RULE-SET,Spotify,Spotify
+ - RULE-SET,TikTok,TikTok
+ - RULE-SET,Netflix,Netflix
+ - RULE-SET,Disney+,Disney+
+ - RULE-SET,YouTube,YouTube
+ - RULE-SET,ChinaMedia,DIRECT
+ - RULE-SET,GlobalMedia,GlobalMedia
+ - RULE-SET,Nintendo,Gamer
+ - RULE-SET,PlayStation,Gamer
+ - RULE-SET,Epic,Gamer
+ - RULE-SET,Xbox,Gamer
+ - RULE-SET,OpenAI,OpenAI
+ - RULE-SET,Microsoft,Microsoft
+ - RULE-SET,Proxy,Proxy
+ - RULE-SET,LAN,DIRECT
+ - RULE-SET,China,DIRECT
+ - GEOIP,CN,DIRECT
+ - MATCH,Proxy
