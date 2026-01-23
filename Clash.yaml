@@ -1,5 +1,5 @@
 # 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，每 300 秒一次健康检查]
-Providers: &Providers {type: http, interval: 86400, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
+Providers: &Providers {type: http, interval: 86400, proxy: 🎯 Direct, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
 
 # 锚点 - 节点订阅
 proxy-providers: 
@@ -84,8 +84,6 @@ sniffer:
       ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
-  force-domain:
-    - +.v2ex.com
   skip-domain:
      - "Mijia Cloud"
      - "+.push.apple.com"
@@ -112,26 +110,29 @@ FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
 FilterSG: &FilterSG "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
 FilterOther: &FilterOther "^(?!.*(港|美|日|新加坡|网|流量)).*$"
 
-# 锚点 - 规则参数 [每天更新一次订阅规则，更新规则时使用Proxy策略]
-RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: Proxy}
-
 # 策略组
 proxy-groups: 
-  - {name: 🔰 Proxies, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/pompurin404/mihomo-party/master/resources/icon.png'}
-  - {name: Telegram, type: select, proxies: 🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png'}
-  - {name: Netflix, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png'}
-  - {name: Disney+, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png'}
-  - {name: YouTube, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png'}
-  - {name: TikTok, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png'}
-  - {name: Spotify, type: select, proxies: [🔰 Proxies, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png'}
-  - {name: Microsoft, type: select, proxies: [DIRECT, Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png'}
-  - {name: GlobalMedia, type: select, proxies: [Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ForeignMedia.png'}
+  - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
+  
+  - {name: AI, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png'}
+  - {name: AsianMedia, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
+  - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
+  - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
+  - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
+  - {name: Tiktok, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png'}  
 
-  - {name: 🇺🇸 美国,  filter: *FilterUS} 
-  - {name: 🇭🇰 香港, filter: *FilterHK}
-  - {name: 🇯🇵 日本, filter: *FilterJP}
-  - {name: 🇸🇬 新加坡, filter: *FilterSG}
-  - {name: 🌐 其他, filter: *FilterOther} 
+  - {name: 🎯 Direct, type: select, proxies: [DIRECT, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png'}  
+  - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
+  - {name: ✈️ Final, type: select, proxies: [🔰 Proxy, DIRECT], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png'}  
+
+  - {name: 🇺🇸 美国,  filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
+  - {name: 🇭🇰 香港, filter: *FilterHK, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png'} 
+  - {name: 🇯🇵 日本, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png'} 
+  - {name: 🇸🇬 新加坡, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
+  - {name: 🌐 其他, filter: *FilterOther, icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png'} 
+
+# 锚点 - 规则参数 [每24小时更新一次订阅规则，更新规则时使用Proxy策略]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🔰 Proxy}
 
 # 订阅规则
 rule-providers:
