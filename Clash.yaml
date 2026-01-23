@@ -115,14 +115,14 @@ FallBack: &FallBack {type: fallback, interval: 600, lazy: true, url: 'http://con
 
 # 策略组
 proxy-groups: 
-  - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
+  - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
   
-  - {name: AI, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png'}
-  - {name: AsianMedia, type: select, proxies: [🎯 Direct, 🇭🇰 香港, 🇭🇰 日本], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
-  - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
-  - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
-  - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
-  - {name: Tiktok, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png'}  
+  - {name: AI, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png'}
+  - {name: AsianMedia, type: select, proxies: [🎯 Direct, 🇭🇰 香港, 🇯🇵 日本], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
+  - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
+  - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🇺🇸 美国, 🌐 其他], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
+  - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
+  - {name: Tiktok, type: select, proxies: [🔰 Proxy, 🇺🇸 美国, 🇭🇰 香港, 🇯🇵 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png'}  
 
   - {name: 🎯 Direct, type: select, proxies: [DIRECT, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png'}  
   - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
