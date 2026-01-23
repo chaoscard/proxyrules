@@ -184,10 +184,10 @@ rule-providers:
 
 rules:
 # Steam下载直连
-  - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
-  - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
-  - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
-  - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
+ - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
+ - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
+ - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
+ - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
 # 分流规则指向，按照优先级顺序排列
  - RULE-SET,Ads,🚫 Ads
  - RULE-SET,Hijacking,🚫 Ads
