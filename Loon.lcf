@@ -42,11 +42,6 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 
 [Proxy Group]
 🔰 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
-🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
-🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
-🇯🇵 日本 = select,日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
-🇸🇬 新加坡 = select,新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
-🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 
 AI = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
 AsianMedia = select,🎯 Direct,🇭🇰 香港,🇯🇵 日本,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
@@ -58,6 +53,12 @@ Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,�
 🎯 Direct = select,DIRECT,🔰 Proxies,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
 🚫 Ads = select,REJECT, DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
 ✈️ Final = select,🔰 Proxies,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+
+🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
+🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
+🇯🇵 日本 = select,日本,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
+🇸🇬 新加坡 = select,新加坡,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
+🌐 其他 = select,其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 
 [Rule]
 FINAL,✈️ Final
