@@ -48,7 +48,7 @@ AsianMedia = select,🎯 Direct,🇭🇰 香港,🇯🇵 日本,img-url = https:
 Crypto = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
 GlobalMedia = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
 Telegram = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
-Tiktok = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+TikTok = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Tiktok_1.png
 
 🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
 🚫 Ads = select,REJECT,DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
