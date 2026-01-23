@@ -51,7 +51,7 @@ Telegram = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,�
 Tiktok = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
 
 🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
-🚫 Ads = select,REJECT, DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
+🚫 Ads = select,REJECT,🎯 Direct,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
 ✈️ Final = select,🔰 Proxy,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
 
 🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
