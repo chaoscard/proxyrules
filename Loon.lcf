@@ -35,10 +35,10 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 
 [Remote Filter]
 美国 = NameRegex, FilterKey = "(?i)^(美|美国|🇺🇸|US)"
-香港 = NameRegex, FilterKey = "(?i)^(港|香港|hong|HK|HKG|🇭🇰)"
+香港 = NameRegex, FilterKey = "(?i)^(港|香港|🇭🇰|HK)"
 日本 = NameRegex, FilterKey = "(?i)^(日|日本|🇯🇵|JP|Japan)"
-新加坡 = NameRegex, FilterKey = "(?i)^(狮城|新加坡|🇸🇬|SG|Singapore)"
-其他 = NameRegex, FilterKey = "^(?!.*(港|美|日|新加坡|网|流量)).*$"
+新加坡 = NameRegex, FilterKey = "(?i)^(新|新加坡|🇸🇬|SG|Singapore)"
+其他 = NameRegex, FilterKey = "^(?!.*(美|港|日|新|网|流量)).*$"
 
 [Proxy Group]
 🔰 Proxy = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
