@@ -41,18 +41,18 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 其他 = NameRegex, FilterKey = "^(?!.*(港|美|日|新加坡|网|流量)).*$"
 
 [Proxy Group]
-🔰 Proxies = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+🔰 Proxy = select,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
 
-AI = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
+AI = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
 AsianMedia = select,🎯 Direct,🇭🇰 香港,🇯🇵 日本,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
-Crypto = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
-GlobalMedia = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
-Telegram = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
-Tiktok = select,🔰 Proxies,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+Crypto = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
+GlobalMedia = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
+Telegram = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+Tiktok = select,🔰 Proxy,🇺🇸 美国,🇭🇰 香港,🇯🇵 日本,🇸🇬 新加坡,🌐 其他,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
 
-🎯 Direct = select,DIRECT,🔰 Proxies,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
+🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
 🚫 Ads = select,REJECT, DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
-✈️ Final = select,🔰 Proxies,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+✈️ Final = select,🔰 Proxy,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
 
 🇺🇸 美国 = select,美国,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
 🇭🇰 香港 = select,香港,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
@@ -85,12 +85,12 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN 
 [Plugin]
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxies, pin=true, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=🔰 Proxies, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=🔰 Proxy, pin=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, tag=DNS增强, pin=true, enabled=true
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag=通用增强, pin=true, enabled=true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxies, pin=true, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxy, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, enabled=true
