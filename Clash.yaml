@@ -110,6 +110,9 @@ FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
 FilterSG: &FilterSG "(?i)^(新|新加坡|🇸🇬|SG|Singapore)"
 FilterOther: &FilterOther "^(?!.*(美|港|日|新|网|流量)).*$"
 
+# 锚点 - 故障转移参数 [每 600 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &FallBack {type: fallback, interval: 600, lazy: true, url: 'http://connectivitycheck.gstatic.com/generate_204', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+
 # 策略组
 proxy-groups: 
   - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 美国, 🇭🇰 香港, 🇭🇰 日本, 🇸🇬 新加坡, 🌐 其他], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
@@ -125,11 +128,11 @@ proxy-groups:
   - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
   - {name: ✈️ Final, type: select, proxies: [🔰 Proxy, DIRECT], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png'}  
 
-  - {name: 🇺🇸 美国, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
-  - {name: 🇭🇰 香港, filter: *FilterHK, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png'} 
-  - {name: 🇯🇵 日本, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png'} 
-  - {name: 🇸🇬 新加坡, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
-  - {name: 🌐 其他, filter: *FilterOther, icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png'} 
+  - {name: 🇺🇸 美国, <<: *FallBack, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
+  - {name: 🇭🇰 香港, <<: *FallBack,  filter: *FilterHK, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png'} 
+  - {name: 🇯🇵 日本, <<: *FallBack, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png'} 
+  - {name: 🇸🇬 新加坡, <<: *FallBack, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
+  - {name: 🌐 其他, <<: *FallBack, filter: *FilterOther, icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png'} 
 
 # 锚点 - 规则参数 [每24小时更新一次订阅规则，更新规则时使用🔰 Proxy策略]
 RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🔰 Proxy}
