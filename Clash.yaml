@@ -58,12 +58,18 @@ dns:
     - https://sm2.doh.pub/dns-query
     - https://dns.alidns.com/dns-query
     - quic://dns.alidns.com
+    - h3://dns.alidns.com/dns-query
+    - h3://223.5.5.5/dns-query
   proxy-server-nameserver:
     - https://sm2.doh.pub/dns-query
     - quic://dns.alidns.com
+    - h3://dns.alidns.com/dns-query
+    - h3://223.5.5.5/dns-query
   direct-nameserver:
     - https://sm2.doh.pub/dns-query
     - quic://dns.alidns.com
+    - h3://dns.alidns.com/dns-query
+    - h3://223.5.5.5/dns-query
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
@@ -269,6 +275,12 @@ rule-providers:
 rules:
 # Apple开发者代理
   - DOMAIN-SUFFIX,gsa.apple.com,🔰 Proxy
+  
+# 电信移动免密认证
+  -DOMAIN,id6.me,🎯 Direct
+  -DOMAIN,log.cmpassport.com,🎯 Direct
+  -DOMAIN,log1.cmpassport.com,🎯 Direct
+  
 # Steam直连下载
   - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
   - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
