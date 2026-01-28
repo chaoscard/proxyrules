@@ -1,0 +1,11 @@
+payload:
+  - PROCESS-NAME,qbittorrent
+  - PROCESS-NAME,qBittorrent
+  - PROCESS-NAME,thunder
+  - PROCESS-NAME,Thunder
+  - PROCESS-NAME,utorrent
+  - PROCESS-NAME,uTorrent
+  - PROCESS-NAME,transmission
+  - PROCESS-NAME,Transmission
+  - PROCESS-NAME,transmission-daemon
+  - PROCESS-NAME,transmission-qt
