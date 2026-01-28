@@ -16,7 +16,7 @@ proxy-providers:
 # 通用配置
 allow-lan: true
 bind-address: "*"
-mode: rule
+mode: Rule
 log-level: info
 ipv6: true
 udp: true
@@ -311,3 +311,4 @@ rules:
   - RULE-SET,LAN,🎯 Direct
   - GEOIP,CN,🎯 Direct
   - MATCH,✈️ Final
+  
