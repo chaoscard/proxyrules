@@ -102,6 +102,9 @@ tun:
   dns-hijack:
     - any:53
     - tcp://any:53
+  #SideStore续签
+  loopback-address:
+    - 10.7.0.1
 
 # 锚点 - 节点筛选组
 FilterUS: &FilterUS "(?i)^(美|美国|🇺🇸|US)"
