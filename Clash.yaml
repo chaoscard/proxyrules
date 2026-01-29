@@ -271,9 +271,9 @@ rules:
   - DOMAIN-SUFFIX,gsa.apple.com,🔰 Proxy
   
 # 电信移动免密认证
-  -DOMAIN,id6.me,🎯 Direct
-  -DOMAIN,log.cmpassport.com,🎯 Direct
-  -DOMAIN,log1.cmpassport.com,🎯 Direct
+  - DOMAIN,id6.me,🎯 Direct
+  - DOMAIN,log.cmpassport.com,🎯 Direct
+  - DOMAIN,log1.cmpassport.com,🎯 Direct
   
 # Steam直连下载
   - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
