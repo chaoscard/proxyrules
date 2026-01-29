@@ -1,1 +1,1 @@
-# proxyrules
+# proxyrules for myself
