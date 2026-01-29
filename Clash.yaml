@@ -42,8 +42,6 @@ geox-url:
 port: 7890
 socks-port: 7891
 mixed-port: 7892
-redir-port: 7893
-tproxy-port: 7894
 
 # DNS
 dns:
@@ -57,13 +55,12 @@ dns:
   nameserver:
     - https://sm2.doh.pub/dns-query
     - https://dns.alidns.com/dns-query
-    - quic://dns.alidns.com:853
   proxy-server-nameserver:
     - https://sm2.doh.pub/dns-query
-    - quic://dns.alidns.com:853
+    - https://dns.alidns.com/dns-query
   direct-nameserver:
     - https://sm2.doh.pub/dns-query
-    - quic://dns.alidns.com:853
+    - https://dns.alidns.com/dns-query
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
