@@ -189,7 +189,7 @@ FilterUS: &FilterUS "(?i)^(美|美国|🇺🇸|US)"
 FilterHK: &FilterHK "(?i)^(港|香港|🇭🇰|HK)"
 FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
 FilterSG: &FilterSG "(?i)^(新|新加坡|🇸🇬|SG|Singapore)"
-FilterOther: &FilterOther "^(?!.*(美|港|日|新|网|流量)).*$"
+FilterOther: &FilterOther "^(?!.*(美|港|日|新|网|流量|时间)).*$"
 
 # 锚点 - 手动选择参数
 SelectCS: &SelectCS { type: select, lazy: true, include-all: true }
