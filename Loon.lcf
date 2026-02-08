@@ -99,7 +99,7 @@ https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
 https://loon.103516.xyz/Plugin/iTunes.lpx, enabled=false
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, policy=🎯 Direct, enabled=true
-https://gist.githubusercontent.com/YIJIU007/a6f754ad773b99f8528d8a002022725a/raw/5fedb0b5762aa6f0fa68fc08bf30aab3dfc27a8a/StartUpADS.plugin, enabled=true
+http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0%E5%8E%BB%E5%B9%BF%E5%91%8A%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, policy=🎯 Direct, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png, enabled=true
