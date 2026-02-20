@@ -5,9 +5,9 @@
 #!tag=去广告
 #!date=2026-02-20
 
-[Rewrite]
+[Rule]
 # 拦截获取广告配置的接口
-^https?:\/\/login-service\.mobile-bank\.psbc\.com\/.*\/getStartUpAdvPicture reject-200
+URL-REGEX, ^https?:\/\/login-service\.mobile-bank\.psbc\.com\/.*\/getStartUpAdvPicture, REJECT
 
 [MITM]
 hostname = login-service.mobile-bank.psbc.com
