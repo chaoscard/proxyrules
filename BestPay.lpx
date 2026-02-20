@@ -1,0 +1,12 @@
+#!name=翼支付去开屏广告
+#!desc=屏蔽翼支付启动页广告 (基于 unionOpenAds 接口)
+#!author=Gemini
+#!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bestpay.png
+#!date=2026-02-20
+
+[Script]
+# 拦截并修改开屏广告接口的返回内容
+http-response ^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appClient\/noEnc\/unionOpenAds script-path=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bestpay_ads.js, requires-body=true, tag=翼支付开屏
+
+[MITM]
+hostname = mapi-app.bestpay.com.cn
