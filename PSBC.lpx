@@ -1,0 +1,12 @@
+#!name=邮储银行去开屏广告
+#!desc=屏蔽邮储银行手机银行开屏广告及相关静态资源。
+#!author=Gemini[https://gemini.google.com]
+#!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.jpg
+#!date=2026-02-20
+
+[Rule]
+# 拦截获取广告配置的接口
+URL-REGEX, ^https?:\/\/login-service\.mobile-bank\.psbc\.com\/.*\/getStartUpAdvPicture, REJECT
+
+[MITM]
+hostname = login-service.mobile-bank.psbc.com
