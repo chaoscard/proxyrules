@@ -1,5 +1,5 @@
-#!name=邮储银行去开屏广告
-#!desc=屏蔽邮储银行手机银行开屏广告及相关静态资源。
+#!name=邮储银行去广告
+#!desc=屏蔽邮储银行开屏广告
 #!author=Gemini[https://gemini.google.com]
 #!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.jpg
 #!tag=去广告
