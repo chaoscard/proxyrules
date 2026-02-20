@@ -2,6 +2,7 @@
 #!desc=屏蔽邮储银行手机银行开屏广告及相关静态资源。
 #!author=Gemini[https://gemini.google.com]
 #!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.jpg
+#!tag=去广告
 #!date=2026-02-20
 
 [Rule]
