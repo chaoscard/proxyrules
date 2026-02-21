@@ -98,36 +98,37 @@ https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugi
 https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag=通用增强, pin=true, enabled=true
 
 https://loon.103516.xyz/Plugin/iTunes.lpx, enabled=false
-http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin, enabled=true
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, policy=🎯 Direct, enabled=true
-https://raw.githubusercontent.com/chaoscard/proxyrules/master/BestPay.lpx, enabled=true
-https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.lpx, enabled=true
+http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin, enabled=true
 http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.plugin?type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true, tag=Pixiv去广告, img-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, policy=🎯 Direct, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/master/BestPay.lpx, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, enabled=true
+https://github.com/NSRingo/Maps/releases/latest/download/iRingo.Maps.plugin, enabled=true
 
 [MITM]
 ca-p12 = MIIJ7wIBAzCCCbUGCSqGSIb3DQEHAaCCCaYEggmiMIIJnjCCBBIGCSqGSIb3DQEHBqCCBAMwggP/AgEAMIID+AYJKoZIhvcNAQcBMFcGCSqGSIb3DQEFDTBKMCkGCSqGSIb3DQEFDDAcBAjZOwvLyfc4hgICCAAwDAYIKoZIhvcNAgkFADAdBglghkgBZQMEASoEEBBIN5AGK7OqcPM4TtsjdMCAggOQC9XTctmnZTSUPHJ/vqTU6Z29ce4CcARpw+JPMk0CS/hgrFNkEKtjPVdWeiwlsMuBJCFWLPGLGKtbAhFX0qQOyHilM7L/1VKzMliLOxwqoheY5BBGYi6IsxWTa7m3NJgeobpMHMx/9FArXbVuBQgcCUD52JcuDKO0VjnehSniUUWz2aFaRB4PVaQkFuanG4B5meeZ1YWQszEGSVJceP4BXyLNRXv0uYaaP6l6YQLII4egLu2NMaxhwYgEGVw6A6sXpe3SyuaKOFsby1VvdAn8QhhpjX26kstbTw8A+Q6Kq4mUoHlJD7+d9ye/wEcsXfB863gJ8OpuTyFUO8ghA4nv2YDJVS/g0w0iIh5l2Hk77Z+Dazh/m/tiPtuZiB8NFaCfxR0G3DoSMgs47fppRsjiyFOfYwLs2ull+kXJYfbHAPaODQUI1QH2w8FTybWe8/513jf5K8FcOzEFh4hSx25tXNwmaOJNGc7EqkWHgYmpMd+Qhq6ZWhBFSLeGb81SJa3fLxN1cngbqrel8KlWtTt10o03Gv/0YAavkLVtI+x5ji/yAHuvbNQg4Z7z0mU9wNMHB6ZLhyYxWA1Qks8qNV+D/3+IziQcoKzXEGsdEutvuL1FmwMgWNXMrmeV+0xj/Yg1bJx+SKvDaix9lnyxT+SrpTrw4RHlq3OVh485cwAp6P+gyzfWQlInBVjRGRecI/ttuLi1fGJPy6zA6CX79smJmvdpRU+PtpiGQx4zWP2E7t4aIUWBrub/twkIbEq/Es4HMI/QVEM5asCR1XU/hCHU8Cl0YJ1/pGRHhor3t1m9cfo5erkcKEQD547f5AbarEYljhB7BCAOiOTUTarJLsyey4WBzCDTXP16thPxktvx/6Yxjd0iv6kRwCmsZG4q1Doaj92UMEzA10Lea63jPz30HGwaHqfBwD/ddxPVPZX3qXIlraXKnCKe8Xz3uI3eYdHiLczIE37bQKjWCv+tCenGp3XQIJDlaGDONaeGXRpmJF+EGCssvKs5xH4vwjZ108B0GbkZ3O5jRRDt4mpLMt5FeA+aomJthvihV7fv58Vlm2CyvUMy0g7qB2s2fX6Bp8NDjECpKFJGTHX+Ths5/n/tDpzgHfUyUQHet6vLY3n64+Zzj+1JBY0EhOcQBFRrHCKIZjoZoatW9gji/vAhqFcZwvLY5abjaX2JTThjitTwoT9j+jNxhAC21KAp8jIwVJHwMIIFhAYJKoZIhvcNAQcBoIIFdQSCBXEwggVtMIIFaQYLKoZIhvcNAQwKAQKgggUxMIIFLTBXBgkqhkiG9w0BBQ0wSjApBgkqhkiG9w0BBQwwHAQIL30mkvW7fToCAggAMAwGCCqGSIb3DQIJBQAwHQYJYIZIAWUDBAEqBBBTj9pNvGZFJN0oHs/cDqdBBIIE0MGWCV/W1BgzOuSbWH46vC2tMRFSORfGjiVPba9EjdHNuGxhFdFw1yYfFexczEEmVr7wc2eW6COG4mmCRMdeMqkl+Gmwg2e0nUJ1HwpObUQ3gCp3J2PJdTv1IOBgqpG6q8xqonaz8gz0Zg8e1O49aVWzPE5C9vWsxHWEzRhc3PXFAHoWO6Kn2Xgkk+RRxXIgwM5a6GIU7Bs6gHH8DaUd5gIOYlp++AlnZEoLzmX7o3JWqM2InwrGS8rtdkT+5BtC4oUlBpD0fsa6GDGJbm53X6IuXR032sQ8yWvFC0DObjsOewpR+jyRf77xYgzKZP8m00T77BqDvN8nWk3eA/7JlOmPkFK9BnZKEjgkmlUO986fTXyp5IjGHBMap4QLY8Hutl3C4zbxZmvrhP5jvrKVutdIViHAj2KNysG/WGcohTlfcT2MwT8F2dzOei7+rosWBPctfFNxZbEh1DBs4V+ARgI6wpS2LvVnLg8fNtOPWDmbp8XdU2eYZDjGcQsi7xAsLZn218WH1VkWMzpo4eXLGDK7glJisTRqGDmse8IxYaSxRZy5jXg+1oRgG4gxqHT2dVsRbghJLWLK6hFnMLlLoQvD0i5qsQSFd0Q/fQErLilSP/VBXLknNXQelJcX1qQp5lTVvz0ToDXY5IJ2JKYAR5m1DNhg5yH175uH/dPN/Q2TuDdHhG1OA+L4Txjy4RnqZ7mz2REj6zFmTj1Gv3Qn/AyU9xO+6YtzsPYcupSLkddffNq87nteLkcmjCAx7fNUsOaJUG7GfGxXztfPo90GQGFY5ywNdb8GTS1XzdBVh6ry19jpaBzkChqHZ/2iLdGUeDAhZ/EtFatAim2gvzmEy6eysIrgfgXqxnYa8VUopV/ghVq4bJdnmB/Q9yfz7iCAh9BqEXdh5XKDOVd21qodkrqyGHlJ+bjQVnzLWZCI7iZaLunmXk/TWgYb77OSxJ3kXcI9XJ6NfZDI8uU64c5wpBhaCD0X3kCyzMI8nVaSt90Vg+PIli1nhE5EHwUwPSncRnpL8rRQsiV1ViyMYlECFe3UdAUG9cEDRto62MV3lvPQr9f3CkBhbR+fHViJpMQAM8GwvEiUOUOKnwjzZbDJ5l3AgM+KBlrFRoOkkacdU5EYmLypCSl+031POi7hjTfEFEtjW/WjYY18i3SdoEFf/vMjjH1FV7TcnUKo+A4dvympxS33Z4xqz4UeSPrr3nq7Tm5Sry5xu737I01SN1vcJ+lNpucgOCs5Lsu9MD/dy7kMdCZG0IdwoooxNxn5JZqbjt39K3pTnsX7FLTP6VO3huf3wuW5qJD/Tyjhkbl8beIZLews7uNLhfEHCaoZAOaURJqA2Mz/2XGGc9Cai6IZYpFHTHLq2yRgBYmi4b1YYny6jHOzwifLk8Au720nho+Hx2unGPeFcW4HsY/2w7zt+IZE+cuooKhE+Qf6UDojfg+sbpyjDoduX3ZzqaLmUMK4F3xmMv6a2LQTJwR6sdW/lvmpUEEuhkxE/7nQP76xbdGBBk7PiQ7rD80ctRqlZfUh1w9dvwNtK7yHpzNMAs2IkC1FenvLYfEHknn/6QsbWSCLvt3QuYdZON6ZlmVTxXMRLsAG4kD0+MnN1VL322DRnfYiGhizZKIeQ6HTqcgf7Z3RMSUwIwYJKoZIhvcNAQkVMRYEFFzeEXbh8upTtsPo6OJ76ouqesPyMDEwITAJBgUrDgMCGgUABBQTdDfz9MnFbugFT7lsAbmIAvjZXAQIFpsoJbFZUaICAggA
