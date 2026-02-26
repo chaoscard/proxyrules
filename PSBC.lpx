@@ -3,13 +3,14 @@
 #!author=Gemini[https://gemini.google.com]
 #!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.jpg
 #!tag=去广告
-#!date=2026-02-20
+#!date=2026-02-26
 
 [Rewrite]
 # 1. 拦截获取静态广告图片的接口
 ^https?:\/\/login-service\.mobile-bank\.psbc\.com\/.*\/getStartUpAdvPicture - reject-200
 # 2. 拦截摇一摇开屏广告配置
 ^https?:\/\/login-service\.mobile-bank\.psbc\.com\/.*\/qryShakeInfo - reject-200
-
+# 3. 拦截广告图片静态资源域名
+^https?:\/\/static\.mobile-bank\.psbc\.com\/static\/index\/advertise\/ - reject
 [MITM]
-hostname = login-service.mobile-bank.psbc.com
+hostname = login-service.mobile-bank.psbc.com, static.mobile-bank.psbc.com
