@@ -51,7 +51,7 @@ iCloud = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.c
 OneDrive = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
 Telegram = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
 TikTok = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
-Update = select,🚫 Reject,🎯 Direct,img-url = https://raw.githubusercontent.com/HotKids/Rules/refs/heads/master/Quantumult/X/Images/Apple.png
+Update = select,🚫 Reject,🎯 Direct,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Apple.png
 
 🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
 🚫 Reject = select,REJECT,DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
