@@ -81,7 +81,6 @@ FINAL,✈️ Final
 [Remote Rule]
 https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫 Reject, tag=Ads, enabled=false
 https://rule.kelee.one/Loon/Hijacking.lsr, policy=🚫 Reject, tag=Hijacking, enabled=false
-https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Loon/Apple/update-domain.list, policy=Update, tag=Update, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
 https://rule.kelee.one/Loon/AsianMedia.lsr, policy=AsianMedia, tag=AsianMedia, enabled=true
 https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
@@ -90,6 +89,7 @@ https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/OneDrive.lsr, policy=OneDrive, tag=OneDrive, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
+https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Loon/Apple/update-domain.list, policy=Update, tag=Update, enabled=true
 
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=🎯 Direct, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN REGION, enabled=true
