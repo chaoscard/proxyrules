@@ -1,0 +1,148 @@
+[General]
+ip-mode = v4-only
+ipv6-vif = off
+
+dns-server = 119.29.29.29,223.5.5.5
+doh-server = https://sm2.doh.pub/dns-query,https://dns.alidns.com/dns-query
+doq-server = quic://223.5.5.5:853,quic://dns.alidns.com:853
+doh3-server = h3://223.5.5.5/dns-query,h3://dns.alidns.com/dns-query
+
+sni-sniffing = true
+disable-stun = true
+dns-reject-mode = LoopbackIP
+domain-reject-mode = DNS
+udp-fallback-mode = REJECT
+
+allow-wifi-access = false
+wifi-access-http-port = 7221
+wifi-access-socks5-port = 7222
+interface-mode = auto
+
+test-timeout = 2
+disconnect-on-policy-change = true
+internet-test-url = http://wifi.vivo.com.cn/generate_204
+proxy-test-url = http://cp.cloudflare.com/generate_204
+resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
+geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+
+skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,captive.apple.com,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,255.255.255.255/32
+
+[Proxy]
+
+[Remote Proxy]
+
+[Remote Filter]
+US = NameRegex, FilterKey = "(?i)^(美|美国|🇺🇸|US)"
+HK = NameRegex, FilterKey = "(?i)^(港|香港|🇭🇰|HK)"
+JP = NameRegex, FilterKey = "(?i)^(日|日本|🇯🇵|JP)"
+SG = NameRegex, FilterKey = "(?i)^(新|新加坡|🇸🇬|SG)"
+ROW = NameRegex, FilterKey = "^(?!.*(美|港|日|新|网|流量)).*$"
+
+[Proxy Group]
+🔰 Proxy = select,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+
+AI = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
+AsianMedia = select,🎯 Direct,🇭🇰 HK,🇯🇵 JP,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
+Crypto = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
+GlobalMedia = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
+iCloud = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/iCloud.png
+OneDrive = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
+Telegram = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+TikTok = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+Update = select,🚫 Reject,🎯 Direct,img-url = https://raw.githubusercontent.com/HotKids/Rules/refs/heads/master/Quantumult/X/Images/Apple.png
+
+🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
+🚫 Reject = select,REJECT,DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
+✈️ Final = select,🔰 Proxy,DIRECT,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+
+🇺🇸 US = select,US,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
+🇭🇰 HK = select,HK,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
+🇯🇵 JP = select,JP,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
+🇸🇬 SG = select,SG,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
+🌐 ROW = select,ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
+
+[Rule]
+# 电信移动免密认证
+DOMAIN,id6.me,🎯 Direct
+DOMAIN-SUFFIX,cmpassport.com,🎯 Direct
+
+# 微信DNS解析
+DOMAIN,dns.weixin.qq.com,🎯 Direct
+DOMAIN,dns.weixin.qq.com.cn,🎯 Direct
+DOMAIN,aedns.weixin.qq.com,🎯 Direct
+
+# 农业银行VPN检测
+DOMAIN,msmp.abchina.com.cn,🚫 Reject
+
+FINAL,✈️ Final
+
+[Remote Rule]
+https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫 Reject, tag=Ads, enabled=false
+https://rule.kelee.one/Loon/Hijacking.lsr, policy=🚫 Reject, tag=Hijacking, enabled=false
+https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Loon/Apple/update-domain.list, policy=Update, tag=Update, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
+https://rule.kelee.one/Loon/AsianMedia.lsr, policy=AsianMedia, tag=AsianMedia, enabled=true
+https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
+https://rule.kelee.one/Loon/GlobalMedia.lsr, policy=GlobalMedia, tag=GlobalMedia, enabled=true
+https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
+https://rule.kelee.one/Loon/OneDrive.lsr, policy=OneDrive, tag=OneDrive, enabled=true
+https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
+https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
+
+https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=🎯 Direct, tag=LAN, enabled=true
+https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN REGION, enabled=true
+
+[Rewrite]
+
+[Host]
+
+[Script]
+
+[Plugin]
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxy, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/DNS.plugin, tag=DNS增强, pin=true, enabled=false
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/plugin/General.plugin, tag=通用增强, pin=true, enabled=false
+
+https://kelee.one/Tool/Loon/Lpx/IPATool.lpx, enabled=true
+https://loon.103516.xyz/Plugin/iTunes.lpx, enabled=false
+https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, policy=🎯 Direct, enabled=false
+http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin, enabled=true
+http://script.hub/file/_start_/https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pixivAds.js/_end_/pixivAds.sgmodule?type=qx-rewrite&n=Pixiv%E5%8E%BB%E5%B9%BF%E5%91%8A+%20%E7%A7%BB%E9%99%A4%E5%BA%94%E7%94%A8%E5%86%85%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png&target=loon-plugin, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.lpx, policy=🎯 Direct, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/master/BestPay.lpx, enabled=true
+https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
+
+[MITM]
+skip-server-cert-verify = false
