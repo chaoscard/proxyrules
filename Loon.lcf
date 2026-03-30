@@ -51,7 +51,6 @@ iCloud = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.c
 OneDrive = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
 Telegram = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
 TikTok = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
-Update = select,🚫 Reject,🎯 Direct,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Apple.png
 
 🎯 Direct = select,DIRECT,🔰 Proxy,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
 🚫 Reject = select,REJECT,DIRECT,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
@@ -89,7 +88,6 @@ https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/OneDrive.lsr, policy=OneDrive, tag=OneDrive, enabled=true
 https://rule.kelee.one/Loon/TikTok.lsr, policy=TikTok, tag=TikTok, enabled=true
 https://rule.kelee.one/Loon/Telegram.lsr, policy=Telegram, tag=Telegram, enabled=true
-https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/main/ConfigFile/Loon/Apple/update-domain.list, policy=Update, tag=Update, enabled=true
 
 https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=🎯 Direct, tag=LAN, enabled=true
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN REGION, enabled=true
