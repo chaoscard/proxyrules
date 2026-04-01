@@ -93,6 +93,7 @@ https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr, policy=🎯 Direct, tag=LAN, e
 https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN REGION, enabled=true
 
 [Rewrite]
+^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs - reject-200
 
 [Host]
 
@@ -143,4 +144,5 @@ https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
 
 [MITM]
+hostname = m.360buyimg.com
 skip-server-cert-verify = false
