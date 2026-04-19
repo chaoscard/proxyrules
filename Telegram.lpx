@@ -1,0 +1,75 @@
+#!name=Telegram增强
+#!desc=将Telegram的垃圾IP转移到好的IP上，减少转圈加载；Telegram外部链接跳转至第三方客户端
+#!openUrl=https://apps.apple.com/app/id686449807
+#!homepage=https://github.com/chaoscard/proxyrules
+#!author=chaoscard[https://github.com/chaoscard], sooyaaabo[https://github.com/sooyaaabo], Repcz[https://github.com/Repcz/Tool]
+#!tag=功能增强
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
+#!date=2026-04-11
+
+[Argument]
+t.me_redirect=select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicrgram", "Lingogram", tag=跳转至对应客户端
+
+[Host]
+91.108.56.100 = 91.108.56.147, use-in-proxy=true
+91.108.56.101 = 91.108.56.147, use-in-proxy=true
+91.108.56.104 = 91.108.56.147, use-in-proxy=true
+91.108.56.107 = 91.108.56.147, use-in-proxy=true
+91.108.56.109 = 91.108.56.147, use-in-proxy=true
+91.108.56.110 = 91.108.56.147, use-in-proxy=true
+91.108.56.113 = 91.108.56.147, use-in-proxy=true
+91.108.56.120 = 91.108.56.147, use-in-proxy=true
+91.108.56.125 = 91.108.56.147, use-in-proxy=true
+91.108.56.126 = 91.108.56.147, use-in-proxy=true
+91.108.56.128 = 91.108.56.147, use-in-proxy=true
+91.108.56.134 = 91.108.56.147, use-in-proxy=true
+91.108.56.138 = 91.108.56.147, use-in-proxy=true
+91.108.56.143 = 91.108.56.147, use-in-proxy=true
+91.108.56.145 = 91.108.56.147, use-in-proxy=true
+91.108.56.156 = 91.108.56.147, use-in-proxy=true
+91.108.56.100 = 91.108.56.135, use-in-proxy=true
+91.108.56.101 = 91.108.56.135, use-in-proxy=true
+91.108.56.104 = 91.108.56.135, use-in-proxy=true
+91.108.56.107 = 91.108.56.135, use-in-proxy=true
+91.108.56.109 = 91.108.56.135, use-in-proxy=true
+91.108.56.110 = 91.108.56.135, use-in-proxy=true
+91.108.56.113 = 91.108.56.135, use-in-proxy=true
+91.108.56.120 = 91.108.56.135, use-in-proxy=true
+91.108.56.125 = 91.108.56.135, use-in-proxy=true
+91.108.56.126 = 91.108.56.135, use-in-proxy=true
+91.108.56.128 = 91.108.56.135, use-in-proxy=true
+91.108.56.134 = 91.108.56.135, use-in-proxy=true
+91.108.56.138 = 91.108.56.135, use-in-proxy=true
+91.108.56.143 = 91.108.56.135, use-in-proxy=true
+91.108.56.145 = 91.108.56.135, use-in-proxy=true
+91.108.56.156 = 91.108.56.135, use-in-proxy=true
+91.108.56.100 = 91.108.56.130, use-in-proxy=true
+91.108.56.101 = 91.108.56.130, use-in-proxy=true
+91.108.56.104 = 91.108.56.130, use-in-proxy=true
+91.108.56.107 = 91.108.56.130, use-in-proxy=true
+91.108.56.109 = 91.108.56.130, use-in-proxy=true
+91.108.56.110 = 91.108.56.130, use-in-proxy=true
+91.108.56.113 = 91.108.56.130, use-in-proxy=true
+91.108.56.120 = 91.108.56.130, use-in-proxy=true
+91.108.56.125 = 91.108.56.130, use-in-proxy=true
+91.108.56.126 = 91.108.56.130, use-in-proxy=true
+91.108.56.128 = 91.108.56.130, use-in-proxy=true
+91.108.56.134 = 91.108.56.130, use-in-proxy=true
+91.108.56.138 = 91.108.56.130, use-in-proxy=true
+91.108.56.143 = 91.108.56.130, use-in-proxy=true
+91.108.56.145 = 91.108.56.130, use-in-proxy=true
+91.108.56.156 = 91.108.56.130, use-in-proxy=true
+
+[Rule]
+DOMAIN-SUFFIX,swiftgram.app,PROXY
+DOMAIN-SUFFIX,iturrit.com,PROXY
+DOMAIN-SUFFIX,imem.app,PROXY
+DOMAIN-SUFFIX,nicegram.app,PROXY
+DOMAIN-SUFFIX,nicegram.cloud,PROXY
+DOMAIN-SUFFIX,intentchat.app,PROXY
+
+[Script]
+http-response (https:\/\/)?t\.me\/(.+) script-path=https://raw.githubusercontent.com/chaoscard/proxyrules/master/t.me_redirect.js, argument=[{t.me_redirect}], timeout=20, tag=[Telegram]t.me重定向
+
+[MitM]
+hostname = t.me
