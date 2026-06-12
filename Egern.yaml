@@ -268,8 +268,6 @@ mitm:
   ca_passphrase: 
   hostnames:
     excludes:
-    - '*.apple.com'
-    - '*.icloud.com'
 http_captures:
   excludes:
   - '*.apple.com'
