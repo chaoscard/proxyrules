@@ -1,0 +1,317 @@
+# 锚点 - 节点订阅的参数 [每24小时更新一次订阅节点，更新订阅节点时使用🎯 Direct策略，每 300 秒一次健康检查]
+Providers: &Providers {type: http, interval: 86400, proxy: 🎯 Direct, health-check: {enable: true, url: 'http://connectivitycheck.gstatic.com/generate_204', interval: 300}}
+
+# 锚点 - 节点订阅
+proxy-providers: 
+  Amy:
+    url: 'AmyURL'
+    <<: *Providers
+    path: './proxy_provider/Amy.yaml'
+    
+  Unicorn:
+    url: 'UnicornURL'
+    <<: *Providers
+    path: './proxy_provider/Unicorn.yaml'
+
+# 通用配置
+allow-lan: true
+bind-address: "*"
+mode: Rule
+log-level: info
+ipv6: true
+udp: true
+find-process-mode: strict
+profile:
+  store-selected: true
+  store-fake-ip: true
+unified-delay: true
+tcp-concurrent: true
+global-ua: clash.meta
+
+# GEO配置
+geodata-mode: false
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geoip.dat"
+  geosite: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/geosite.dat"
+  mmdb: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/country.mmdb"
+  asn: "https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@release/GeoLite2-ASN.mmdb"
+
+# 端口
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+
+# DNS
+dns:
+  enable: true
+  prefer-h3: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+  nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  proxy-server-nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  direct-nameserver:
+    - https://sm2.doh.pub/dns-query
+    - https://dns.alidns.com/dns-query
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - rule-set:LAN
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - time.*.com
+    - time.*.gov
+    - time.*.edu.cn
+    - time.*.apple.com
+    - time1.*.com
+    - time2.*.com
+    - time3.*.com
+    - time4.*.com
+    - time5.*.com
+    - time6.*.com
+    - time7.*.com
+    - ntp.*.com
+    - ntp1.*.com
+    - ntp2.*.com
+    - ntp3.*.com
+    - ntp4.*.com
+    - ntp5.*.com
+    - ntp6.*.com
+    - ntp7.*.com
+    - "*.time.edu.cn"
+    - "*.ntp.org.cn"
+    - +.pool.ntp.org
+    - time1.cloud.tencent.com
+    - stun.*.*
+    - stun.*.*.*
+    - swscan.apple.com
+    - mesu.apple.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - +.wotgame.cn
+    - +.wggames.cn
+    - +.wowsgame.cn
+    - +.wargaming.net
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.*.xboxlive.com"
+    - "*.ipv6.microsoft.com"
+    - teredo.*.*.*
+    - teredo.*.*
+    - speedtest.cros.wr.pvp.net
+    - +.jjvip8.com
+    - www.douyu.com
+    - activityapi.huya.com
+    - activityapi.huya.com.w.cdngslb.com
+    - www.bilibili.com
+    - api.bilibili.com
+    - a.w.bilicdn1.com
+
+# 域名嗅探
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+     - "Mijia Cloud"
+     - "dlg.io.mi.com"
+     - "+.push.apple.com"
+  skip-src-address:
+    - 192.168.0.3/32
+  skip-dst-address:
+    - 192.168.0.3/32
+
+# 虚拟网卡
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+  dns-hijack:
+    - any:53
+    - tcp://any:53
+  #SideStore续签
+  loopback-address:
+    - 10.7.0.1
+
+# 锚点 - 节点筛选组
+FilterUS: &FilterUS "(?i)^(美|美国|🇺🇸|US)"
+FilterHK: &FilterHK "(?i)^(港|香港|🇭🇰|HK)"
+FilterJP: &FilterJP "(?i)^(日|日本|🇯🇵|JP|Japan)"
+FilterSG: &FilterSG "(?i)^(新|新加坡|🇸🇬|SG|Singapore)"
+FilterROW: &FilterOther "^(?!.*(美|港|日|新|网|流量|时间)).*$"
+
+# 锚点 - 手动选择参数
+SelectCS: &SelectCS { type: select, lazy: true, include-all: true }
+
+# 策略组
+proxy-groups: 
+  - {name: 🔰 Proxy, type: select, proxies: [🇺🇸 US, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🌐 ROW], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png'}
+  
+  - {name: AI, type: select, proxies: [🔰 Proxy, 🇺🇸 US, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🌐 ROW], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png'}
+  - {name: AsianMedia, type: select, proxies: [🎯 Direct, 🇭🇰 HK, 🇯🇵 JP], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png'}
+  - {name: Crypto, type: select, proxies: [🔰 Proxy, 🇺🇸 US, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🌐 ROW], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png'}
+  - {name: GlobalMedia, type: select, proxies: [🔰 Proxy, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🇺🇸 US, 🌐 ROW], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png'}
+  - {name: iCloud, type: select, proxies: [🎯 Direct, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/iCloud.png'}
+  - {name: OneDrive, type: select, proxies: [🎯 Direct, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png'}  
+  - {name: Telegram, type: select, proxies: [🔰 Proxy, 🇺🇸 US, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🌐 ROW], icon: 'https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png'}
+  - {name: TikTok, type: select, proxies: [🔰 Proxy, 🇺🇸 US, 🇭🇰 HK, 🇯🇵 JP, 🇸🇬 SG, 🌐 ROW], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png'}  
+
+  - {name: 🎯 Direct, type: select, proxies: [DIRECT, 🔰 Proxy], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png'}  
+  - {name: 🚫 Ads, type: select, proxies: [REJECT, DIRECT], icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png'}  
+  - {name: ✈️ Final, type: select, proxies: [🔰 Proxy, DIRECT], icon: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png'}  
+
+  - {name: 🇺🇸 US, <<: *SelectCS, filter: *FilterUS, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png'} 
+  - {name: 🇭🇰 HK, <<: *SelectCS,  filter: *FilterHK, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png'} 
+  - {name: 🇯🇵 JP, <<: *SelectCS, filter: *FilterJP, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png'} 
+  - {name: 🇸🇬 SG, <<: *SelectCS, filter: *FilterSG, icon: 'https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png'} 
+  - {name: 🌐 ROW, <<: *SelectCS, filter: *FilterROW, icon: 'https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png'} 
+
+# 锚点 - 规则参数 [每24小时更新一次订阅规则，更新规则时使用🔰 Proxy策略]
+RuleSet: &RuleSet {type: http, behavior: classical, interval: 86400, format: yaml, proxy: 🔰 Proxy}
+
+# 订阅规则
+rule-providers:
+  Ads:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Classical.yaml'
+    path: './RuleSet/Ads.yaml'
+
+  Hijacking:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml'
+    path: './RuleSet/Hijacking.yaml'
+
+  AI:
+    <<: *RuleSet
+    url: 'https://kelee.one/Tool/Loon/Lsr/AI.yaml'
+    path: './RuleSet/AI.yaml'
+
+  AsianMedia:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AsianMedia/AsianMedia.yaml'
+    path: './RuleSet/AsianMedia.yaml'
+
+  Crypto:
+    <<: *RuleSet
+    url: 'https://www.naiixi.com/Extra_Crypto.list'
+    path: './RuleSet/Crypto.yaml'
+
+  GlobalMedia:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia_Classical.yaml'
+    path: './RuleSet/GlobalMedia.yaml'
+
+  iCloud:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml'
+    path: './RuleSet/iCloud.yaml'
+
+  OneDrive:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml'
+    path: './RuleSet/OneDrive.yaml'
+
+  TikTok:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok_No_Resolve.yaml'
+    path: './RuleSet/TikTok.yaml'
+
+  Telegram:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml'
+    path: './RuleSet/Telegram.yaml'
+    
+  LAN:
+    <<: *RuleSet
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml'
+    path: './RuleSet/LAN.yaml'
+
+
+rules:
+# Apple开发者代理
+  - DOMAIN-SUFFIX,gsa.apple.com,🔰 Proxy
+  
+# 电信移动免密认证
+  - DOMAIN,id6.me,🎯 Direct
+  - DOMAIN-SUFFIX,cmpassport.com,🎯 Direct
+  
+# Steam直连下载
+  - DOMAIN,steamcdn-a.akamaihd.net,🎯 Direct
+  - DOMAIN-SUFFIX,cm.steampowered.com,🎯 Direct
+  - DOMAIN-SUFFIX,steamserver.net,🎯 Direct
+  - DOMAIN-SUFFIX,steamcontent.com,🎯 Direct
+
+# BT种子直连下载
+  - PROCESS-NAME,qbittorrent,🎯 Direct
+  - PROCESS-NAME,qBittorrent,🎯 Direct
+  - PROCESS-NAME,thunder,🎯 Direct
+  - PROCESS-NAME,Thunder,🎯 Direct
+  - PROCESS-NAME,utorrent,🎯 Direct
+  - PROCESS-NAME,uTorrent,🎯 Direct
+  - PROCESS-NAME,transmission,🎯 Direct
+  - PROCESS-NAME,Transmission,🎯 Direct
+  - PROCESS-NAME,transmission-daemon,🎯 Direct
+  - PROCESS-NAME,transmission-qt,🎯 Direct
+
+# 分流规则
+  - RULE-SET,Ads,🚫 Ads
+  - RULE-SET,Hijacking,🚫 Ads
+  - RULE-SET,AI,AI
+  - RULE-SET,AsianMedia,AsianMedia
+  - RULE-SET,Crypto,Crypto
+  - RULE-SET,GlobalMedia,GlobalMedia
+  - RULE-SET,iCloud,iCloud
+  - RULE-SET,OneDrive,OneDrive
+  - RULE-SET,TikTok,TikTok
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,LAN,🎯 Direct
+  - GEOIP,CN,🎯 Direct
+  - MATCH,✈️ Final

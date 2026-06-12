@@ -1,0 +1,399 @@
+ipv6: false
+hide_vpn_icon: true
+
+allow_external_connections: false
+http_port: 3080
+socks_port: 3090
+
+vif_only: true
+block_quic: true
+bypass_tunnel_proxy:
+  - 192.168.0.0/16
+  - 10.0.0.0/8
+  - 172.16.0.0/12
+  - localhost
+  - '*.local'
+  - '*.crashlytics.com'
+  - captive.apple.com
+vif_excluded_routes:
+  - 10.0.0.0/8
+  - 100.64.0.0/10
+  - 127.0.0.0/8
+  - 169.254.0.0/16
+  - 172.16.0.0/12
+  - 192.0.0.0/24
+  - 192.0.2.0/24
+  - 192.88.99.0/24
+  - 192.168.0.0/16
+  - 198.51.100.0/24
+  - 203.0.113.0/24
+  - 224.0.0.0/4
+  - 239.255.255.250/32
+  - 255.255.255.255/32
+
+geoip_db_url: https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
+asn_db_url: https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+proxy_latency_test_url: http://cp.cloudflare.com/generate_204
+direct_latency_test_url: http://wifi.vivo.com.cn/generate_204
+
+dns:
+  bootstrap:
+    - 223.5.5.5
+    - 119.29.29.29
+  upstreams:
+    Domestic:
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    Oversea:
+      - https://1.1.1.1/dns-query
+      - https://dns.google/dns-query
+      - https://cloudflare-dns.com/dns-query
+  forward:
+  - proxy_rule_set:
+      match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+      value: Oversea
+  - proxy_rule_set:
+      match: https://www.naiixi.com/Extra_Crypto.list
+      value: Oversea
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/Telegram.lsr
+      value: Oversea
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/TikTok.lsr
+      value: Oversea
+  - proxy_rule_set:
+      match: https://rule.kelee.one/Loon/GlobalMedia.lsr
+      value: Oversea
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_proxy_list.module
+      value: Oversea
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/Rabbit-Spec/Surge/refs/heads/Master/Rules/China.list
+      value: Domestic
+  - proxy_rule_set:
+      match: https://raw.githubusercontent.com/GMOogway/shadowrocket-rules/master/sr_direct_list.module
+      value: Domestic
+  - domain_wildcard:
+      match: '*.cn'
+      value: Domestic
+  - domain_wildcard:
+      match: '*'
+      value: Oversea
+
+policy_groups:
+- external:
+    name: sub
+    type: select
+    urls:
+    - http://sub.store/subscription
+    block_quic: true
+    hidden: true
+- select:
+    name: 🔰 Proxy
+    policies:
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
+- select:
+    name: AI
+    policies:
+    - 🔰 Proxy
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
+- select:
+    name: AsianMedia
+    policies:
+    - 🎯 Direct
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
+- select:
+    name: Crypto
+    policies:
+    - 🔰 Proxy
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
+- select:
+    name: GlobalMedia
+    policies:
+    - 🔰 Proxy
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
+- select:
+    name: iCloud
+    policies:
+    - 🎯 Direct
+    - 🔰 Proxy
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/iCloud.png
+- select:
+    name: OneDrive
+    policies:
+    - 🎯 Direct
+    - 🔰 Proxy
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
+- select:
+    name: Telegram
+    policies:
+    - 🔰 Proxy
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+- select:
+    name: TikTok
+    policies:
+    - 🔰 Proxy
+    - 🇺🇸 US
+    - 🇭🇰 HK
+    - 🇯🇵 JP
+    - 🇸🇬 SG
+    - 🌐 ROW
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
+- select:
+    name: 🎯 Direct
+    policies:
+    - DIRECT
+    - 🔰 Proxy
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
+- select:
+    name: 🚫 Reject
+    policies:
+    - REJECT
+    - DIRECT
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/ads.png
+- select:
+    name: ✈️ Final
+    policies:
+    - 🔰 Proxy
+    - DIRECT
+    icon: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Final.png
+- select:
+    name: 🇺🇸 US
+    policies:
+    - sub
+    flatten: true
+    filter: (?i)^(美|美国|🇺🇸|US)
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
+- select:
+    name: 🇭🇰 HK
+    policies:
+    - sub
+    flatten: true
+    filter: (?i)^(港|香港|🇭🇰|HK)
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
+- select:
+    name: 🇯🇵 JP
+    policies:
+    - sub
+    flatten: true
+    filter: (?i)^(日|日本|🇯🇵|JP)
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
+- select:
+    name: 🇸🇬 SG
+    policies:
+    - sub
+    flatten: true
+    filter: (?i)^(新|新加坡|🇸🇬|SG)
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
+- select:
+    name: 🌐 ROW
+    policies:
+    - sub
+    flatten: true
+    filter: ^(?!.*(美|港|日|新|网|到期|时间|流量|客户端|升级)).*$
+    icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
+
+rules:
+- protocol:
+    match: stun
+    policy: 🚫 Reject
+- rule_set:
+    match: https://rule.kelee.one/Loon/AdvertisingLite.lsr
+    policy: 🚫 Reject
+- rule_set:
+    match: https://rule.kelee.one/Loon/Hijacking.lsr
+    policy: 🚫 Reject
+- rule_set:
+    match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
+    policy: AI
+- rule_set:
+    match: https://www.naiixi.com/Extra_Crypto.list
+    policy: Crypto
+- rule_set:
+    match: https://rule.kelee.one/Loon/iCloud.lsr
+    policy: iCloud
+- rule_set:
+    match: https://rule.kelee.one/Loon/OneDrive.lsr
+    policy: OneDrive
+- rule_set:
+    match: https://rule.kelee.one/Loon/Telegram.lsr
+    policy: Telegram
+- rule_set:
+    match: https://rule.kelee.one/Loon/TikTok.lsr
+    policy: TikTok
+- rule_set:
+    match: https://rule.kelee.one/Loon/AsianMedia.lsr
+    policy: AsianMedia
+- rule_set:
+    match: https://rule.kelee.one/Loon/GlobalMedia.lsr
+    policy: GlobalMedia
+- rule_set:
+    match: https://kelee.one/Tool/Loon/Lsr/LAN_SPLITTER.lsr
+    policy: 🎯 Direct
+- geoip:
+    match: CN
+    policy: 🎯 Direct
+- default:
+    policy: ✈️ Final
+
+mitm:
+  ca_p12: 
+  ca_passphrase: 
+  hostnames:
+    excludes:
+    - '*.apple.com'
+    - '*.icloud.com'
+http_captures:
+  excludes:
+  - '*.apple.com'
+  - '*.icloud.com'
+
+modules:
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Direct.yaml
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx
+  compat_arguments:
+    PROXY: 🔰 Proxy
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx
+  compat_arguments:
+    PROXY: 🔰 Proxy
+  enabled: true
+- url: https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin
+  compat_arguments:
+    PROXY: 🔰 Proxy
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/IPATool.lpx
+  enabled: true
+- url: https://loon.103516.xyz/Plugin/iTunes.lpx
+  enabled: false
+- url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
+  compat_arguments:
+    PROXY: 🎯 Direct
+  enabled: false
+- url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin&category=%E5%8E%BB%E5%B9%BF%E5%91%8A
+  enabled: true
+- url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js/_end_/kuwo.plugin?n=%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90%E5%A2%9E%E5%BC%BA%20%2B%20%E5%8E%BB%E9%99%A4%E5%85%A8%E5%B1%80%E5%B9%BF%E5%91%8A%E3%80%81%E8%A7%A3%E9%94%81%E4%BC%9A%E5%91%98%E6%9D%83%E9%99%90&type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true&icon=https%3A%2F%2Fraw.githubusercontent.com%2Fluestr%2FIconResource%2Fmain%2FApp_icon%2F120px%2FKuwo.png&category=%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Pixiv.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Telegram.yaml
+  compat_arguments:
+    PROXY: Telegram
+    t.me_redirect: Telegram
+  enabled: true
+- url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/XWebAds.plugin
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.lpx
+  compat_arguments:
+    动态最常访问: show
+    空降助手策略: 🎯 Direct
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/VenenoSix24/Ivy-Script/main/Loon/plugin/Coolapk_Redirect.plugin
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/XiaoHeiHe_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/MrHema_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/BestPay.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/PSBC.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/QQ_Redirect.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/BaiduSearchWebpage_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx
+  enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Github.lpx
+  enabled: true
+- url: https://kelee.one/Tool/Loon/Lpx/Google.lpx
+  enabled: true
+- name: YouTube去广告
+  url: https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
+  compat_arguments:
+    屏蔽Shorts按钮: 'true'
+    字幕翻译语言: zh-Hans
+    歌词翻译语言: zh-Hans
+    启用调试模式: 'true'
+  enabled: true
+- name: YouTube双语翻译
+  url: https://github.com/DualSubs/YouTube/releases/latest/download/DualSubs.YouTube.sgmodule
+  compat_arguments:
+    Type: Translate
+  enabled: true
+- url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin
+  compat_arguments:
+    Weather.Provider: ColorfulClouds
+    NextHour.Provider: ColorfulClouds
+    AirQuality.Calculate.Algorithm: WAQI_InstantCast_US
+    Storage: Argument
+    LogLevel: WARN
+  enabled: true

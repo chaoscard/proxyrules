@@ -1,0 +1,19 @@
+#!name=Pixiv去广告
+#!desc=去除Pixiv应用内广告
+#!openUrl=https://apps.apple.com/app/id337248563
+#!homepage=https://github.com/chaoscard/proxyrules
+#!author=chaoscard[https://github.com/chaoscard]
+#!tag=去广告
+#!icon=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/pixiv(1).png
+#!date=2026-04-20
+
+[Rule]
+# 去除小说推荐页广告
+DOMAIN-SUFFIX,ads-pixiv.net,REJECT
+DOMAIN,pixiv.org,REJECT
+
+[Rewrite]
+^https:\/\/oauth\.secure\.pixiv\.net\/auth\/token response-body-json-replace response.user.is_premium true user.is_premium true
+
+[MITM]
+hostname = oauth.secure.pixiv.net
