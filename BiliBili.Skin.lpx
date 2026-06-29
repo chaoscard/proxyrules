@@ -1,0 +1,14 @@
+#!name=哔哩哔哩皮肤
+#!desc=哔哩哔哩皮肤自定义，原作者@MartinsKin基础上增删了一些皮肤,需订阅\nhttps://raw.githubusercontent.com/chaoscard/proxyrules/master/bilibili.skin.boxjs.json
+#!openUrl=http://boxjs.com/#/app/BiliBili.Skin
+#!author=MartinsKing[https://github.com/ClydeTime]
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
+#!tag=功能增强
+
+[Script]
+http-response ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? requires-body=true, script-path=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bilibili.skin.js, tag=📺 BiliBili.Modified.x.resource.show.skin, argument=
+http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/(account\/(myinfo|mine)|space)([\/?]|$) requires-body=true, script-path=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bilibili.skin.js, tag=📺 BiliBili.Modified.x.v2, argument=
+http-response ^https:\/\/api\.bilibili\.com\/x\/vip\/(web\/vip_center\/combine|price\/panel\/lexi|top_panel_info) requires-body=true, script-path=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bilibili.skin.js, tag=📺 BiliBili.Modified.x.vip, argument=
+
+[MitM]
+hostname = app.bilibili.com, api.bilibili.com

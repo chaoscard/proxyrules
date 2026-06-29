@@ -1,0 +1,15 @@
+#!name=翼支付去广告
+#!desc=屏蔽翼支付开屏广告
+#!openUrl=https://apps.apple.com/app/id519952689
+#!homepage=https://github.com/chaoscard/proxyrules
+#!author=chaoscard[https://github.com/chaoscard]
+#!icon=https://raw.githubusercontent.com/chaoscard/proxyrules/master/bestpay.png
+#!tag=去广告
+#!date=2026-03-18
+
+[Rewrite]
+# 拦截开屏广告接口
+^https?:\/\/mapi-app\.bestpay\.com\.cn\/gapi\/appClient\/noEnc\/unionOpenAds - reject-200
+
+[MITM]
+hostname = mapi-app.bestpay.com.cn

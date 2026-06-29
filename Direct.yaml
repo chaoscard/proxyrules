@@ -1,0 +1,22 @@
+name: "域名放行"
+description: "放行冲突域名"
+author: "chaoscard"
+homepage: "https://github.com/chaoscard/proxyrules"
+icon: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png"
+
+rules:
+- domain:
+    match: id6.me
+    policy: 🎯 Direct
+- domain_suffix:
+    match: cmpassport.com
+    policy: 🎯 Direct
+- domain:
+    match: dns.weixin.qq.com
+    policy: 🎯 Direct
+- domain:
+    match: dns.weixin.qq.com.cn
+    policy: 🎯 Direct
+- domain:
+    match: aedns.weixin.qq.com
+    policy: 🎯 Direct
