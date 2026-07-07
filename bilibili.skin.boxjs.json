@@ -1,0 +1,360 @@
+{
+	"id": "BiliBili.Skin",
+	"name": "BiliBili皮肤",
+	"author": "@MartinsKing",
+	"description": "哔哩哔哩皮肤",
+	"icon": "https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png",
+	"repo": "https://github.com/chaoscard/proxyrules",
+	"apps":
+	[
+		{
+			"id": "BiliBili.Modified.Setting",
+			"name": "📺 BiliBili: 👘 Modified ",
+			"author": "@MartinsKing",
+			"script": "https://raw.githubusercontent.com/chaoscard/proxyrules/master/bilibili.skin.js",
+			"icons":
+			[
+				"https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png",
+				"https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png"
+			],
+			"descs_html":
+			[
+				"依次选择皮肤、加载动画、是否修改大会员等",
+				"选择完成后记得点击此页面底端右下角的\"保存\"。"
+			],
+			"keys":
+			[
+				"@BiliBili.Modified.Settings.Skin",
+				"@BiliBili.Modified.Settings.Private"
+			],
+			"settings":
+			[
+				{
+					"id": "@BiliBili.Modified.Settings.Switch",
+					"name": "总功能开关",
+					"val": true,
+					"type": "boolean",
+					"desc": "是否启用此APP修改"
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Skin.user_equip",
+					"name": "皮肤",
+					"val":
+					[
+						"1735549421001"
+					],
+					"type": "radios",
+					"items":
+					[
+						{
+							"key": "32264",
+							"label": "EveOneCat2"
+						},
+						{
+							"key": "1680348700001",
+							"label": "幻想乡的日常·第1弹"
+						},
+						{
+							"key": "1735549421001",
+							"label": "东方收藏集·浮生若梦"
+						},
+						{
+							"key": "1771441474001",
+							"label": "近月少女的礼仪"
+						},
+						{
+							"key": "1716959545001",
+							"label": "星空列车与白的旅行"
+						},
+						{
+							"key": "1756718589001",
+							"label": "诡秘之主·时代回响"
+						},
+						{
+							"key": "1775208367001",
+							"label": "诡秘之主·愚者旧梦"
+						},
+						{
+							"key": "6059",
+							"label": "星尘"
+						},
+						{
+							"key": "36781",
+							"label": "海伊"
+						},
+						{
+							"key": "2529",
+							"label": "初音未来·日版"
+						},
+						{
+							"key": "2530",
+							"label": "初音未来·夜版"
+						},
+						{
+							"key": "1707208933001",
+							"label": "初音未来·动态"
+						},
+						{
+							"key": "1765870054001",
+							"label": "初音未来·魔法星夜"
+						},
+						{
+							"key": "1739358425001",
+							"label": "初音未来·征稿"
+						},
+						{
+							"key": "1752737431001",
+							"label": "洛天依·流光协奏"
+						},
+						{
+							"key": "1752135412001",
+							"label": "洛天依·八音奇响"
+						},
+						{
+							"key": "1737365117001",
+							"label": "洛天依·天星问"
+						},
+						{
+							"key": "1734595774001",
+							"label": "洛天依·戏游九州"
+						},
+						{
+							"key": "1766397138001",
+							"label": "2233·霜星祈愿"
+						},
+						{
+							"key": "1755076798001",
+							"label": "2233·十五岁生日"
+						},
+						{
+							"key": "4124",
+							"label": "2233·良辰美景·不问天"
+						},
+						{
+							"key": "1770191094001",
+							"label": "2233·丙午年拜年画册"
+						},
+						{
+							"key": "1736321078001",
+							"label": "2233·乙巳年拜年画册"
+						},
+						{
+							"key": "1716453643001",
+							"label": "2233·幻境序曲·白昼"
+						},
+						{
+							"key": "1774509554001",
+							"label": "2233·元素协奏·岩颂"
+						},
+						{
+							"key": "1760510307001",
+							"label": "2233·元素协奏·森脉"
+						},
+						{
+							"key": "1747819619001",
+							"label": "2233·元素协奏·潮蚀"
+						},
+						{
+							"key": "1754046817001",
+							"label": "2233·元素协奏·寻疆"
+						},
+						{
+							"key": "71367",
+							"label": "2233·群星闪耀时·众神"
+						},
+						{
+							"key": "56175",
+							"label": "2233·群星闪耀时·双子座"
+						},
+						{
+							"key": "67969",
+							"label": "2233·群星闪耀时·金牛座"
+						},
+						{
+							"key": "67651",
+							"label": "2233·群星闪耀时·白羊座"
+						},
+						{
+							"key": "66848",
+							"label": "2233·群星闪耀时·双鱼座"
+						},
+						{
+							"key": "66425",
+							"label": "2233·群星闪耀时·水瓶座"
+						},
+						{
+							"key": "65914",
+							"label": "2233·群星闪耀时·摩羯座"
+						},
+						{
+							"key": "64053",
+							"label": "2233·群星闪耀时·射手座"
+						},
+						{
+							"key": "61113",
+							"label": "2233·群星闪耀时·天蝎座"
+						},
+						{
+							"key": "60039",
+							"label": "2233·群星闪耀时·天秤座"
+						},
+						{
+							"key": "58653",
+							"label": "2233·群星闪耀时·处女座"
+						},
+						{
+							"key": "55910",
+							"label": "2233·群星闪耀时·巨蟹座"
+						},
+						{
+							"key": "55865",
+							"label": "2233·群星闪耀时·狮子座"
+						}
+					]
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Skin.load_equip",
+					"name": "加载动画",
+					"val":
+					[
+						"1735546154001"
+					],
+					"type": "radios",
+					"items":
+					[
+						{
+							"key": "32263",
+							"label": "EveOneCat2"
+						},
+						{
+							"key": "1680280135001",
+							"label": "幻想乡的日常·第1弹"
+						},
+						{
+							"key": "1735546154001",
+							"label": "东方收藏集·浮生若梦"
+						},
+						{
+							"key": "1772382092001",
+							"label": "近月少女的礼仪"
+						},
+						{
+							"key": "1717061982001",
+							"label": "星空列车与白的旅行"
+						},
+						{
+							"key": "1756284564001",
+							"label": "诡秘之主·时代回响"
+						},
+						{
+							"key": "1775205528001",
+							"label": "诡秘之主·愚者旧梦"
+						},
+						{
+							"key": "6061",
+							"label": "星尘"
+						},
+						{
+							"key": "2531",
+							"label": "初音未来"
+						},
+						{
+							"key": "1707211282001",
+							"label": "初音未来·动态"
+						},
+						{
+							"key": "1765868727001",
+							"label": "初音未来·魔法星夜"
+						},
+						{
+							"key": "1739357325001",
+							"label": "初音未来·征稿"
+						},
+						{
+							"key": "1734594614001",
+							"label": "洛天依·戏游九州"
+						},
+						{
+							"key": "1766397271001",
+							"label": "2233·霜星祈愿"
+						},
+						{
+							"key": "1755143360001",
+							"label": "2233·十五岁生日"
+						},
+						{
+							"key": "4125",
+							"label": "2233·良辰美景·不问天"
+						},
+						{
+							"key": "1770191326001",
+							"label": "2233·丙午年拜年画册"
+						},
+						{
+							"key": "1735885495001",
+							"label": "2233·乙巳年拜年画册"
+						},
+						{
+							"key": "1716450459001",
+							"label": "2233·幻境序曲·白昼"
+						},
+						{
+							"key": "1774508734001",
+							"label": "2233·元素协奏·岩颂"
+						},
+						{
+							"key": "1760510513001",
+							"label": "2233·元素协奏·森脉"
+						},
+						{
+							"key": "1747817775001",
+							"label": "2233·元素协奏·潮蚀"
+						}
+					]
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.vip",
+					"name": "大会员",
+					"val": false,
+					"type": "boolean",
+					"desc": "是否更改为大会员状态（自慰）"
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.coin",
+					"name": "硬币数",
+					"val": "",
+					"type": "text",
+					"desc": ""
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.bcoin",
+					"name": "B币数",
+					"val": "",
+					"type": "text",
+					"desc": ""
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.follower",
+					"name": "粉丝数",
+					"val": "",
+					"type": "text",
+					"desc": ""
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.level",
+					"name": "用户等级",
+					"val": "",
+					"type": "text",
+					"desc": "小于等于6"
+				},
+				{
+					"id": "@BiliBili.Modified.Settings.Private.like",
+					"name": "被赞次数",
+					"val": "",
+					"type": "text",
+					"desc": ""
+				}
+			]
+		}
+	]
+}

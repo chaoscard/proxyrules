@@ -1,0 +1,14 @@
+#!name=域名放行
+#!desc=放行冲突域名
+#!author=chaoscard[https://github.com/chaoscard]
+#!homepage=https://github.com/chaoscard/proxyrules
+#!icon=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Direct.png
+
+[Rule]
+# 电信移动免密认证
+DOMAIN,id6.me,PROXY
+DOMAIN-SUFFIX,cmpassport.com,PROXY
+# 微信DNS解析
+DOMAIN,dns.weixin.qq.com,PROXY
+DOMAIN,dns.weixin.qq.com.cn,PROXY
+DOMAIN,aedns.weixin.qq.com,PROXY
