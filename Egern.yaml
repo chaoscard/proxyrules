@@ -378,6 +378,7 @@ modules:
   enabled: true
 - name: YouTube去广告
   url: https://github.com/Maasea/sgmodule/raw/master/YouTube.Enhance.sgmodule
+  icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/YouTube.png
   compat_arguments:
     屏蔽Shorts按钮: 'true'
     字幕翻译语言: zh-Hans
