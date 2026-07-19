@@ -138,7 +138,7 @@ policy_groups:
     - 🇯🇵 JP
     - 🇸🇬 SG
     - 🌐 ROW
-    icon: https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Icons/Telegram.png
+    icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
 - select:
     name: TikTok
     policies:
