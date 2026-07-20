@@ -305,7 +305,7 @@ modules:
 - url: http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin&category=%E5%8E%BB%E5%B9%BF%E5%91%8A
   enabled: true
 - url: http://script.hub/file/_start_/https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/Kuwo/kuwo.js/_end_/kuwo.plugin?n=%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90%E5%A2%9E%E5%BC%BA%20%2B%20%E5%8E%BB%E9%99%A4%E5%85%A8%E5%B1%80%E5%B9%BF%E5%91%8A%E3%80%81%E8%A7%A3%E9%94%81%E4%BC%9A%E5%91%98%E6%9D%83%E9%99%90&type=qx-rewrite&target=loon-plugin&del=true&jqEnabled=true&icon=https%3A%2F%2Fraw.githubusercontent.com%2Fluestr%2FIconResource%2Fmain%2FApp_icon%2F120px%2FKuwo.png&category=%E5%8A%9F%E8%83%BD%E5%A2%9E%E5%BC%BA
-  enabled: true
+  enabled: false
 - url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Pixiv.lpx
   enabled: true
 - url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/Telegram.yaml
