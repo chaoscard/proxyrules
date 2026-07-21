@@ -47,7 +47,7 @@ AI = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,
 Crypto = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
 iCloud = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/iCloud.png
 OneDrive = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
-Telegram = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
+Telegram = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/04ProxySoft/telegram(1).png
 TikTok = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/TikTok_1.png
 AsianMedia = select,🎯 Direct,🇭🇰 HK,🇯🇵 JP,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/AsianMedia.png
 GlobalMedia = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/ForeignMedia.png
