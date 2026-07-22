@@ -1,0 +1,12 @@
+#!name=滴滴出行去广告+
+#!desc=移除首页额外的广告内容
+#!openUrl=https://apps.apple.com/app/id554499054
+#!tag=去广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/DiDi.png
+#!date=2026-07-22
+
+[Rewrite]
+ ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? response-body-json-del data.order_cards.widget_card
+
+[MitM]
+hostname = conf.diditaxi.com.cn
