@@ -340,6 +340,8 @@ modules:
   enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
   enabled: true
+- url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/DiDiPlus.lpx
+  enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx
   enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
