@@ -1,5 +1,5 @@
 ipv6: false
-hide_vpn_icon: true
+hide_vpn_icon: false
 close_connections_on_policy_change: true
 
 allow_external_connections: false
