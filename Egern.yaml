@@ -82,10 +82,11 @@ dns:
 
 policy_groups:
 - external:
-    name: sub
+    name: Sub
     type: select
     urls:
     - https://sub.store/download
+    icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/05icon/jichang.png
     block_quic: true
     hidden: true
 - select:
@@ -187,35 +188,35 @@ policy_groups:
 - select:
     name: 🇺🇸 US
     policies:
-    - sub
+    - Sub
     flatten: true
     filter: (?i)^(美|美国|🇺🇸|US)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
 - select:
     name: 🇭🇰 HK
     policies:
-    - sub
+    - Sub
     flatten: true
     filter: (?i)^(港|香港|🇭🇰|HK)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
 - select:
     name: 🇯🇵 JP
     policies:
-    - sub
+    - Sub
     flatten: true
     filter: (?i)^(日|日本|🇯🇵|JP)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
 - select:
     name: 🇸🇬 SG
     policies:
-    - sub
+    - Sub
     flatten: true
     filter: (?i)^(新|新加坡|🇸🇬|SG)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
 - select:
     name: 🌐 ROW
     policies:
-    - sub
+    - Sub
     flatten: true
     filter: ^(?!.*(美|港|日|新|网|到期|时间|流量|客户端|升级)).*$
     icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
