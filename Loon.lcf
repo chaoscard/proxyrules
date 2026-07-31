@@ -103,7 +103,6 @@ https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxy, pin=true, ena
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxy, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
-https://kelee.one/Tool/Loon/Lpx/IPATool.lpx, enabled=true
 https://loon.103516.xyz/Plugin/iTunes.lpx, enabled=false
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin, policy=🎯 Direct, enabled=false
 http://script.hub/file/_start_/https://ddgksf2013.top/rewrite/StartUpAds.conf/_end_/StartUpAds.sgmodule?type=qx-rewrite&n=%E5%A2%A8%E9%B1%BC%E5%8E%BB%E5%BC%80%E5%B1%8F2.0+%20%E5%8E%BB%E9%99%A4APP%E5%BC%80%E5%B1%8F%E5%B9%BF%E5%91%8A&headers=User-Agent:surge&del=true&jqEnabled=true&icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AdBlack.png&target=loon-plugin&category=%E5%8E%BB%E5%B9%BF%E5%91%8A, enabled=false
