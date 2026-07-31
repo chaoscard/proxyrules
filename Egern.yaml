@@ -295,8 +295,8 @@ modules:
   compat_arguments:
     PROXY: 🔰 Proxy
   enabled: true
-- url: https://kelee.one/Tool/Loon/Lpx/IPATool.lpx
-  enabled: true
+- url: https://loon.103516.xyz/Plugin/iTunes.lpx
+  enabled: false
 - url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
   compat_arguments:
     PROXY: 🎯 Direct
@@ -399,4 +399,3 @@ modules:
     Storage: Argument
     LogLevel: WARN
   enabled: true
-  
