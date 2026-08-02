@@ -314,6 +314,9 @@ modules:
   enabled: true
 - url: https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/XWebAds.plugin
   enabled: true
+- url: https://raw.githubusercontent.com/takoyakiwhite/asoul_mirror/refs/heads/main/bilibili_pcdn.plugin
+  icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
+  enabled: true
 - url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.Skin.lpx
   enabled: true
 - url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.sgmodule
