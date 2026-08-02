@@ -110,6 +110,7 @@ http://script.hub/file/_start_/https://raw.githubusercontent.com/Yuheng0101/X/ma
 https://raw.githubusercontent.com/chaoscard/proxyrules/master/Pixiv.lpx, enabled=true
 https://raw.githubusercontent.com/chaoscard/proxyrules/master/Telegram.lpx, policy=Telegram, enabled=true
 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/XWebAds.plugin, enabled=true
+https://raw.githubusercontent.com/takoyakiwhite/asoul_mirror/main/bilibili_pcdn.plugin, img-url=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png, enabled=true
 https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.lpx, policy=🎯 Direct, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx, enabled=true
