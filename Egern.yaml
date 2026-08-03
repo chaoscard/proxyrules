@@ -190,28 +190,28 @@ policy_groups:
     policies:
     - Sub
     flatten: true
-    filter: (?i)^(美|美国|🇺🇸|US)
+    filter: (?i)(美|美国|🇺🇸|US)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/US(2).png
 - select:
     name: 🇭🇰 HK
     policies:
     - Sub
     flatten: true
-    filter: (?i)^(港|香港|🇭🇰|HK)
+    filter: (?i)(港|香港|🇭🇰|HK)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Hongkong(3).png
 - select:
     name: 🇯🇵 JP
     policies:
     - Sub
     flatten: true
-    filter: (?i)^(日|日本|🇯🇵|JP)
+    filter: (?i)(日|日本|🇯🇵|JP)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/Japan(2).png
 - select:
     name: 🇸🇬 SG
     policies:
     - Sub
     flatten: true
-    filter: (?i)^(新|新加坡|🇸🇬|SG)
+    filter: (?i)(新|新加坡|🇸🇬|SG)
     icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/01Country/singapore.png
 - select:
     name: 🌐 ROW
@@ -394,7 +394,7 @@ modules:
   compat_arguments:
     Type: Translate
   enabled: true
-- url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin
+- url: https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.lpx
   compat_arguments:
     Weather.Provider: ColorfulClouds
     NextHour.Provider: ColorfulClouds
