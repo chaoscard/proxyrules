@@ -22,7 +22,6 @@ test-timeout = 2
 disconnect-on-policy-change = true
 internet-test-url = http://wifi.vivo.com.cn/generate_204
 proxy-test-url = http://cp.cloudflare.com/generate_204
-resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
 geoip-url = https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb
 ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
 
@@ -34,10 +33,10 @@ bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,1
 [Remote Proxy]
 
 [Remote Filter]
-US = NameRegex, FilterKey = "(?i)^(美|美国|🇺🇸|US)"
-HK = NameRegex, FilterKey = "(?i)^(港|香港|🇭🇰|HK)"
-JP = NameRegex, FilterKey = "(?i)^(日|日本|🇯🇵|JP)"
-SG = NameRegex, FilterKey = "(?i)^(新|新加坡|🇸🇬|SG)"
+US = NameRegex, FilterKey = "(?i)(美|美国|🇺🇸|US)"
+HK = NameRegex, FilterKey = "(?i)(港|香港|🇭🇰|HK)"
+JP = NameRegex, FilterKey = "(?i)(日|日本|🇯🇵|JP)"
+SG = NameRegex, FilterKey = "(?i)(新|新加坡|🇸🇬|SG)"
 ROW = NameRegex, FilterKey = "^(?!.*(美|港|日|新|网|到期|时间|流量|客户端|升级)).*$"
 
 [Proxy Group]
@@ -99,6 +98,7 @@ https://kelee.one/Tool/Loon/Lsr/REGION_SPLITTER.lsr, policy=🎯 Direct, tag=CN 
 https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon-parser.plugin, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxy, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxy, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
@@ -143,7 +143,7 @@ https://raw.githubusercontent.com/chaoscard/proxyrules/master/Github.lpx, enable
 https://kelee.one/Tool/Loon/Lpx/Google.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/YouTubeSubtitlesTranslation.lpx, enabled=true
-https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin, enabled=true
+https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.lpx, enabled=true
 
 [MITM]
 skip-server-cert-verify = false
