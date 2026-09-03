@@ -222,6 +222,10 @@ policy_groups:
     icon: https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 
 rules:
+- domain:
+    match: codeload.github.com
+    policy: 🚫 Reject
+# 暂时不知道是干什么的，一直跑流量，先屏蔽吧
 - protocol:
     match: stun
     policy: 🚫 Reject
