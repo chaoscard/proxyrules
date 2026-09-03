@@ -62,6 +62,9 @@ GlobalMedia = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,
 🌐 ROW = select,ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/World.png
 
 [Rule]
+# 暂时不知道是干什么的，一直跑流量，先屏蔽吧
+DOMAIN,codeload.github.com,🚫 Reject
+
 # 电信移动免密认证
 DOMAIN,id6.me,🎯 Direct
 DOMAIN-SUFFIX,cmpassport.com,🎯 Direct
