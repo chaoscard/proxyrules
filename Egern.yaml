@@ -109,6 +109,12 @@ policy_groups:
     - 🌐 ROW
     icon: https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
 - select:
+    name: Apple
+    policies:
+    - 🎯 Direct
+    - 🔰 Proxy
+    icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
+- select:
     name: Crypto
     policies:
     - 🔰 Proxy
@@ -238,6 +244,9 @@ rules:
 - rule_set:
     match: https://kelee.one/Tool/Loon/Lsr/AI.lsr
     policy: AI
+- rule_set:
+    match: https://rule.kelee.one/Loon/Apple.lsr
+    policy: Apple
 - rule_set:
     match: https://www.naiixi.com/Extra_Crypto.list
     policy: Crypto
