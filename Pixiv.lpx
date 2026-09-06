@@ -12,6 +12,9 @@
 DOMAIN-SUFFIX,ads-pixiv.net,REJECT
 DOMAIN,pixiv.org,REJECT
 
+# Pixiv图片镜像站
+DOMAIN,i.pixiv.re,PROXY
+
 [Rewrite]
 ^https:\/\/oauth\.secure\.pixiv\.net\/auth\/token response-body-json-replace response.user.is_premium true user.is_premium true
 
