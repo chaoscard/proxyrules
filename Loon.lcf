@@ -43,6 +43,7 @@ ROW = NameRegex, FilterKey = "^(?!.*(美|港|日|新|网|到期|时间|流量|�
 🔰 Proxy = select,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/icon/qure/color/Proxy.png
 
 AI = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/HotKids/Rules/master/Quantumult/X/Images/Color/ChatGPT.png
+Apple = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png
 Crypto = select,🔰 Proxy,🇺🇸 US,🇭🇰 HK,🇯🇵 JP,🇸🇬 SG,🌐 ROW,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/Bitcoin.png
 iCloud = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/chaoscard/proxyrules/master/iCloud.png
 OneDrive = select,🎯 Direct,🔰 Proxy,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/03CNSoft/OneDrive(1).png
@@ -80,6 +81,7 @@ FINAL,✈️ Final
 https://rule.kelee.one/Loon/AdvertisingLite.lsr, policy=🚫 Reject, tag=Ads, enabled=true
 https://rule.kelee.one/Loon/Hijacking.lsr, policy=🚫 Reject, tag=Hijacking, enabled=true
 https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=AI, tag=AI, enabled=true
+https://rule.kelee.one/Loon/Apple.lsr, policy=Apple, tag=Apple, enabled=true
 https://www.naiixi.com/Extra_Crypto.list, policy=Crypto, tag=Crypto, enabled=true
 https://rule.kelee.one/Loon/iCloud.lsr, policy=iCloud, tag=iCloud, enabled=true
 https://rule.kelee.one/Loon/OneDrive.lsr, policy=OneDrive, tag=OneDrive, enabled=true
