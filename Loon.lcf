@@ -104,6 +104,7 @@ https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=🔰 Proxy, pin=true, enabled=true
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon-parser.plugin, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Script-Hub.lpx, policy=🔰 Proxy, pin=true, enabled=true
+https://raw.githubusercontent.com/ios151/Rewrite/main/dev-loopback/modules/dev-loopback.lpx, pin=true, enabled=true
 https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=🔰 Proxy, pin=true, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, pin=true, enabled=true
 
