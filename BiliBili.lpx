@@ -5,7 +5,7 @@
 #!author=kokoryh[https://github.com/kokoryh]
 #!tag=去广告
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Bilibili.png
-#!date=2026-07-21
+#!date=2026-10-28
 
 [Argument]
 displayUpList=select,"show","hide","auto",tag=[动态]中[最常访问]的显示方式
