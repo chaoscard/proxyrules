@@ -16,7 +16,6 @@ logLevel=select,"error","warn","info","debug","off",tag=日志等级
 
 [Rule]
 DOMAIN,bsbsb.top,PROXY
-DOMAIN,dns.google,REJECT
 DOMAIN,api.biliapi.com,REJECT
 DOMAIN,app.biliapi.com,REJECT
 DOMAIN,api.biliapi.net,REJECT
