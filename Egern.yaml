@@ -324,6 +324,7 @@ modules:
 - url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/BiliBili.sgmodule
   compat_arguments:
     动态最常访问: show
+    空降助手: '#'
     空降助手策略: 🎯 Direct
   enabled: true
 - url: https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx
