@@ -1,0 +1,16 @@
+#!name=GitHub429错误
+#!desc=设置Accept-Language避免429错误
+#!openUrl=https://apps.apple.com/app/id1477376905
+#!homepage=https://github.com/chaoscard/proxyrules
+#!author=chaoscard[https://github.com/chaoscard]
+#!tag=功能增强
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/GitHub.png
+#!date=2026-04-12
+
+[Rewrite]
+# 设置Accept-Language避免429错误
+^https:\/\/github\.com\/ header-replace Accept-Language en-us
+^https:\/\/.*\.githubusercontent\.com\/ header-replace Accept-Language en-us
+
+[Mitm]
+hostname = github.com, *.githubusercontent.com

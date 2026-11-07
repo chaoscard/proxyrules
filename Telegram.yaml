@@ -1,0 +1,124 @@
+name: Telegram增强
+description: 将Telegram的垃圾IP转移到好的IP上，减少转圈加载；Telegram外部链接跳转至第三方客户端
+compat_arguments:
+  t.me_redirect: Telegram
+  PROXY: PROXY
+compat_arguments_schema:
+  t.me_redirect:
+    name: 跳转至对应客户端
+    default_value: Telegram
+    options:
+    - Telegram
+    - Swiftgram
+    - Turrit
+    - iMe
+    - Nicegram
+    - Lingogram
+  PROXY:
+    name: PROXY
+    description: 代理规则使用的策略
+    default_value: PROXY
+open_url: https://apps.apple.com/app/id686449807
+author: sooyaaabo[https://github.com/sooyaaabo], Repcz[https://github.com/Repcz/Tool]
+icon: https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Telegram.png
+dns:
+  hosts:
+    91.108.56.100:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.101:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.104:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.107:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.109:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.110:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.113:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.120:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.125:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.126:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.128:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.134:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.138:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.143:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.145:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.146:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+    91.108.56.156:
+    - 91.108.56.130
+    - 91.108.56.135
+    - 91.108.56.147
+rules:
+- domain_suffix:
+    match: swiftgram.app
+    policy: PROXY
+- domain_suffix:
+    match: iturrit.com
+    policy: PROXY
+- domain_suffix:
+    match: imem.app
+    policy: PROXY
+- domain_suffix:
+    match: nicegram.app
+    policy: PROXY
+- domain_suffix:
+    match: nicegram.cloud
+    policy: PROXY
+- domain_suffix:
+    match: intentchat.app
+    policy: PROXY
+scriptings:
+- http_response:
+    name: '[Telegram]t.me重定向'
+    match: (https:\/\/)?t\.me\/(.+)
+    script_url: https://raw.githubusercontent.com/chaoscard/proxyrules/master/t.me_redirect.js
+    env:
+      _compat.$argument: '{"t.me_redirect":"Telegram"}'
+    timeout: 20
+mitm:
+  hostnames:
+    includes:
+    - t.me
